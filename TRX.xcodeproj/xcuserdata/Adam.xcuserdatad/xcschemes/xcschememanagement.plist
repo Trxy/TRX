@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>TRXTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>TRXiOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>TRXtvOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>663E81401D45FC6F00130EB5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>667AEFA11D460530004E291C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>667AEFB41D460941004E291C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>667AEFC31D460A16004E291C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>667AEFD21D460A7D004E291C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
