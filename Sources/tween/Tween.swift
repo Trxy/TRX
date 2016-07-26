@@ -1,3 +1,9 @@
+/**
+ 
+ Animates any numerical value
+ 
+ */
+
 import Foundation
 
 protocol Updatable {
@@ -10,14 +16,24 @@ final public class Tween<T: Morphable>: AbstractTweenable, Tweenable, Updatable 
   
   //MARK: properties
   
+  /// Starting value (Morphable)
   public let from: T
+  
+  /// End value (Morphable)
   public let to: T
+  
+  /// Timing function (EaseFunction)
   public let ease: EaseFunction
+  
+  /// Duration (seconds)
   private(set) public var time: NSTimeInterval
+  
+  /// Time offset (seconds)
   private(set) public var delay: NSTimeInterval
 
   //MARK: callbacks
   
+  /// Update callback
   public var onUpdate: UpdateClosure
 
   //MARK: initializer
@@ -27,8 +43,8 @@ final public class Tween<T: Morphable>: AbstractTweenable, Tweenable, Updatable 
    
    - Parameter from: Starting value (Morphable).
    - Parameter to: End value (Morphable).
-   - Parameter time: Duration (seconds/NSTimeInterval).
-   - Parameter delay: (optional) Time offset (seconds/NSTimeInterval). Defaults to 0.
+   - Parameter time: Duration (seconds).
+   - Parameter delay: (optional) Time offset (seconds). Defaults to 0.
    - Parameter ease: (optional) Timing function (EaseFunction). Defaults to Linear.linear.
    - Parameter key: (optional) Tween key (String). Any other running animation with the same key will be stopped. Defaults to nil.
    - Parameter onStart: (optional) Start callback. Defaults to nil.
@@ -59,6 +75,7 @@ final public class Tween<T: Morphable>: AbstractTweenable, Tweenable, Updatable 
   
   //MARK: lifecycle
 
+  /// Current time offset (seconds)
   override public var head: NSTimeInterval {
     didSet {
       if oldValue != head {
@@ -98,6 +115,7 @@ final public class Tween<T: Morphable>: AbstractTweenable, Tweenable, Updatable 
   
   //MARK: time
   
+  /// Duration (seconds)
   override public var duration: NSTimeInterval {
     get {
       return time + delay
@@ -107,6 +125,7 @@ final public class Tween<T: Morphable>: AbstractTweenable, Tweenable, Updatable 
     }
   }
   
+  /// Scale. Defaults to 1.0
   public var scale: Double = 1.0 {
     didSet {
       time *= scale

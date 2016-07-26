@@ -1,7 +1,14 @@
+/**
+ 
+ Dispatches time events to subscribers
+ 
+ */
+
 import QuartzCore
 
 final public class Scheduler: Dispatcher {
   
+  /// Shared singleton
   public static let shared = Scheduler()
   
   lazy var displayLink: CADisplayLink = {
@@ -58,8 +65,7 @@ final public class Scheduler: Dispatcher {
   
   private func subscribersWithKeys(keys: Set<String>) -> [Proxy] {
     
-    let a = subscribers.filter { $0.keys.intersect(keys).count > 0 }
-    return a
+    return subscribers.filter { $0.keys.intersect(keys).count > 0 }
   }
   
   private func pauseAll(subscribers: [Proxy]) {

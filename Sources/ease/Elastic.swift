@@ -1,8 +1,15 @@
+/**
+ 
+ Elastic Easing Functions
+ 
+ */
+
 import Foundation
 
 public struct Elastic {
   
-  public static let easeIn:EaseFunction = {
+  /// Ease in
+  public static let easeIn: EaseFunction = {
     t, b, c, d in
     if t == 0 { return b }
     let t = t / d
@@ -12,7 +19,8 @@ public struct Elastic {
     return -(c * pow(2, 10 * (t - 1)) * sin((t * d - s) * (2 * M_PI) / p)) + b
   }
   
-  public static let easeOut:EaseFunction = {
+  /// Ease out
+  public static let easeOut: EaseFunction = {
     t, b, c, d in
     if t == 0 { return b }
     let t = t / d
@@ -22,7 +30,8 @@ public struct Elastic {
     return c * pow(2, -10 * t) * sin((t * d - s) * (2 * M_PI) / p) + c + b
   }
   
-  public static let easeInOut:EaseFunction = {
+  /// Ease in out
+  public static let easeInOut: EaseFunction = {
     t, b, c, d in
     if t == 0 { return b }
     let t = t / (d / 2)

@@ -1,3 +1,10 @@
+/**
+ 
+ Agregates multiple Tweenables.
+ Use a Timelines to chain Tweens or even other Timelines.
+ 
+ */
+
 import Foundation
 
 final public class TimeLine: AbstractTweenable, Tweenable {
@@ -52,6 +59,7 @@ final public class TimeLine: AbstractTweenable, Tweenable {
     .forEach { ($0.tween as? Updatable)?.update() }
   }
   
+  /// Current time offset (seconds)
   override public var head: NSTimeInterval {
     didSet {
       update(head, prevHead: oldValue)
@@ -89,6 +97,7 @@ final public class TimeLine: AbstractTweenable, Tweenable {
   
   //MARK: collection
   
+  /// contained Tweeenables
   public var tweens: [Tweenable] {
     return container.map { $0.tween }
   }
@@ -121,6 +130,7 @@ final public class TimeLine: AbstractTweenable, Tweenable {
   
   //MARK: time
   
+  /// Duration (seconds)
   override public var duration: NSTimeInterval {
     get {
       return container.map({ $0.span.end }).maxElement() ?? 0
@@ -130,6 +140,7 @@ final public class TimeLine: AbstractTweenable, Tweenable {
     }
   }
   
+  /// Scale. Defaults to 1.0
   public var scale: Double = 1.0 {
     didSet {
       container = container.map { $0.scaled(scale) }

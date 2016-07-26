@@ -1,3 +1,9 @@
+/**
+ 
+ Conform to this protocol to enable scheduling and aggregating by Timelines.
+ 
+ */
+
 import Foundation
 
 public typealias StartClosure = () -> ()
@@ -8,7 +14,7 @@ public protocol Tweenable: class {
   /// Duration (seconds)
   var duration: NSTimeInterval { get set }
   
-  /// Scale. Defaults to 1.0.
+  /// Scale. Defaults to 1.0
   var scale: Double { get set }
   
   /// Current time offset (seconds)
@@ -26,7 +32,7 @@ public protocol Tweenable: class {
   /// Start the animation
   func start()
   
-  /// Stop the animation and move head to initial position
+  /// Stop the animation
   func stop()
   
   /**

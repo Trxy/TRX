@@ -1,18 +1,27 @@
+/**
+ 
+ Quad Easing Functions
+ 
+ */
+
 public struct Quad {
   
-  public static let easeIn:EaseFunction = {
+  /// Ease in
+  public static let easeIn: EaseFunction = {
     t, b, c, d in
     let t = t / d;
     return c * t * t + b
   }
   
-  public static let easeOut:EaseFunction = {
+  /// Ease out
+  public static let easeOut: EaseFunction = {
     t, b, c, d in
     let t = t / d
     return -c * t * (t - 2) + b
   }
   
-  public static let easeInOut:EaseFunction = {
+  /// Ease in out
+  public static let easeInOut: EaseFunction = {
     t, b, c, d in
     var t = t / (d / 2)
     if t < 1 {

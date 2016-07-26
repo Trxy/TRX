@@ -1,12 +1,26 @@
+/**
+ 
+ Tweenable base class
+ 
+ */
+
 import Foundation
 
 public class AbstractTweenable: Subscriber, Schedulable {
   
+  /// Start callback
   public var onStart: StartClosure?
+  
+  /// Completion callback
   public var onComplete: CompletionClosure?
+  
+  /// Animation Keys
   public var keys: Set<String> = []
+  
+  /// Current time offset (seconds)
   internal(set) public var head: NSTimeInterval = 0
   
+  /// Pause or resume animation
   public var paused : Bool = true {
     didSet {
       if paused != oldValue {
@@ -38,8 +52,14 @@ public class AbstractTweenable: Subscriber, Schedulable {
     }
   }
   
+  /// Duration (seconds)
   public var duration: NSTimeInterval = 0
   
+  /**
+   Move head to a specific time offset
+   
+   - Parameter delta: Time offset (seconds)
+   */
   final public func seek(delta: NSTimeInterval) {
     head = min(max(delta, 0), duration)
   }
@@ -47,10 +67,12 @@ public class AbstractTweenable: Subscriber, Schedulable {
   var scheduler: Dispatcher = Scheduler.shared
   private var startTime: NSTimeInterval = 0
   
+  /// Start the animation
   final public func start() {
     paused = false
   }
   
+  /// Stop the animation
   final public func stop() {
     paused = true
   }
