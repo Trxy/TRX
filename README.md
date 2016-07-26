@@ -1,4 +1,4 @@
-## What is TRX?
+# TRX [![Build Status](https://img.shields.io/travis/Trxy/TRX/master.svg)](https://travis-ci.org/Trxy/TRX) [![CocoaPods](https://img.shields.io/cocoapods/v/TRX.svg)](https://cocoapods.org/?q=trx) [![License](https://img.shields.io/github/license/Trxy/TRX.svg)](LICENSE)
 
 **TRX** is a versatile animation framework built with ease of use, powerful features and performance in mind.
 **TRX** is inspired by the the excellent JavaScript animation framework [GSAP](http://greensock.com/gsap).
@@ -143,6 +143,6 @@ If you'd like to ask a general question use [Stack Overflow](http://stackoverflo
 
 ## License
 
-[MIT](license.md)
+[MIT](LICENSE)
 
 Project maintained by: [@AKModzelewski](https://twitter.com/AKModzelewski)
