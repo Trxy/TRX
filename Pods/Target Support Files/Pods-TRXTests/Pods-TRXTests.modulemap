@@ -1,6 +1,0 @@
-framework module Pods_TRXTests {
-  umbrella header "Pods-TRXTests-umbrella.h"
-
-  export *
-  module * { export * }
-}

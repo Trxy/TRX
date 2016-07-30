@@ -1,1 +1,0 @@
-public typealias EaseFunction = (t: Double, b: Double, c: Double, d: Double) -> Double
