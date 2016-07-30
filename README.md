@@ -112,7 +112,7 @@ myView.trxFrameTo(someFrame)
 ## Requirements
 
 ```
-iOS: 8.4, Swift
+iOS: 8.4, tvOS: 9.0, Swift
 ```
 ## Installation
 ### Cocoa Pods
@@ -122,6 +122,12 @@ pod "TRX"
 Don't forget to add use_frameworks! to the Podfile. 
 Requires CocoaPods 0.36.x or greater.
 If you need more help use [CocoaPods Guides](https://guides.cocoapods.org/using/getting-started.html#getting-started).
+
+### Carthage
+Add to your [Cartfile](https://github.com/Carthage/Carthage):
+```
+github "Trxy/TRX"
+```
 
 ### Manual
 
