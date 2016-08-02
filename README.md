@@ -13,6 +13,12 @@
 * Squeeze and stretch Tweens and Timelines
 * Have total control, pause, play, seek any Tween or Timeline
 
+## Examples
+
+![Tricks](https://trxy.github.io/TRX/tricks.gif)
+
+Have a look at [Tricks](https://github.com/Trxy/Tricks), the example app for use cases
+
 ## Using TRX
 
 ### Basic Usage
