@@ -55,7 +55,7 @@ final public class Tween<T: Morphable>: AbstractTweenable, Tweenable, Updatable 
                        to: T,
                        time: NSTimeInterval,
                        delay: NSTimeInterval = 0,
-                       ease: Ease.TimingFunction = Ease.linear,
+                       ease: Ease.TimingFunction = Ease.Quad.easeOut,
                        key: String? = nil,
                        onStart: StartClosure? = nil,
                        onComplete: CompletionClosure? = nil,

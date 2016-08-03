@@ -63,7 +63,7 @@ Tween(from: 0,
 - `to`: End value (`Morphable`).
 - `time`: Duration (`NSTimeInterval`).
 - `delay`: **optional** Time offset (`NSTimeInterval`). *Defaults to 0*.
-- `ease`: **optional** Timing function (`Ease.TimingFunction`). *Defaults to Ease.linear*.
+- `ease`: **optional** Timing function (`Ease.TimingFunction`). *Defaults to Ease.Quad.easeOut*.
 - `key`: **optional** Tween key (`String`). Any other running animation with the same key will be stopped. *Defaults&nbsp;to&nbsp;nil*.
 - `onStart`: **optional** Start callback. *Defaults to nil*.
 - `onComplete`: **optional** Completion callback. *Defaults to nil*.
