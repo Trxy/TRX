@@ -23,7 +23,7 @@ final public class Tween<T: Morphable>: AbstractTweenable, Tweenable, Updatable 
   public let to: T
   
   /// Timing function (EaseFunction)
-  public let ease: EaseFunction
+  public let ease: Ease.EaseFunction
   
   /// Duration (seconds)
   private(set) public var time: NSTimeInterval
@@ -55,7 +55,7 @@ final public class Tween<T: Morphable>: AbstractTweenable, Tweenable, Updatable 
                        to: T,
                        time: NSTimeInterval,
                        delay: NSTimeInterval = 0,
-                       ease: EaseFunction = Linear.linear,
+                       ease: Ease.EaseFunction = Ease.Linear.linear,
                        key: String? = nil,
                        onStart: StartClosure? = nil,
                        onComplete: CompletionClosure? = nil,

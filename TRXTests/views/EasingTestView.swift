@@ -3,9 +3,9 @@ import UIKit
 
 class EasingTestView: UIView {
   
-  private let ease: EaseFunction
+  private let ease: Ease.EaseFunction
   
-  required init(easing: EaseFunction) {
+  required init(easing: Ease.EaseFunction) {
     self.ease = easing
     super.init(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
     self.backgroundColor = UIColor.blueColor().colorWithAlphaComponent(0.1)

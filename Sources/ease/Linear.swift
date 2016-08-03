@@ -1,15 +1,21 @@
-/**
- 
- Linear Easing Functions
- 
- */
+import Foundation
 
-public struct Linear {
+public extension Ease {
   
-  /// Linear
-  public static let linear: EaseFunction = {
-    t, b, c, d in
-    c * t / d + b
+  /**
+   
+   Linear Easing Functions
+   
+   */
+  
+  public struct Linear {
+    
+    /// Linear
+    public static let linear: EaseFunction = {
+      t, b, c, d in
+      c * t / d + b
+    }
+    
   }
   
 }

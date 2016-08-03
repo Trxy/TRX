@@ -51,7 +51,7 @@ Tween(from: 0,
       to: 1,
       time: 0.3,
       delay: 0.1,
-      ease: Elastic.easeOut,
+      ease: Ease.Elastic.easeOut,
       key: "MyOwnKey",
       onStart: { print("start") },
       onComplete: { done in print("complete and done: \(done)") }) { value in

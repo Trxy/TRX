@@ -8,58 +8,58 @@ class EasingSpec: QuickSpec {
   
   override func spec() {
     
-    describe("linear") {
+    describe("Linear") {
       
       it("has valid graph") {
-        expect(EasingTestView(easing: Linear.linear)).to(haveValidSnapshot())
+        expect(EasingTestView(easing: Ease.Linear.linear)).to(haveValidSnapshot())
       }
   
     }
     
-    describe("quad") {
+    describe("Quad") {
       
       it("has valid in graph") {
-        expect(EasingTestView(easing: Quad.easeIn)).to(haveValidSnapshot())
+        expect(EasingTestView(easing: Ease.Quad.easeIn)).to(haveValidSnapshot())
       }
       
       it("has valid out graph") {
-        expect(EasingTestView(easing: Quad.easeOut)).to(haveValidSnapshot())
+        expect(EasingTestView(easing: Ease.Quad.easeOut)).to(haveValidSnapshot())
       }
       
       it("has valid inOut graph") {
-        expect(EasingTestView(easing: Quad.easeInOut)).to(haveValidSnapshot())
+        expect(EasingTestView(easing: Ease.Quad.easeInOut)).to(haveValidSnapshot())
       }
       
     }
     
-    describe("cubic") {
+    describe("Cubic") {
       
       it("has valid in graph") {
-        expect(EasingTestView(easing: Cubic.easeIn)).to(haveValidSnapshot())
+        expect(EasingTestView(easing: Ease.Cubic.easeIn)).to(haveValidSnapshot())
       }
       
       it("has valid out graph") {
-        expect(EasingTestView(easing: Cubic.easeOut)).to(haveValidSnapshot())
+        expect(EasingTestView(easing: Ease.Cubic.easeOut)).to(haveValidSnapshot())
       }
       
       it("has valid inOut graph") {
-        expect(EasingTestView(easing: Cubic.easeInOut)).to(haveValidSnapshot())
+        expect(EasingTestView(easing: Ease.Cubic.easeInOut)).to(haveValidSnapshot())
       }
       
     }
     
-    describe("quart") {
+    describe("Quart") {
       
       it("has valid in graph") {
-        expect(EasingTestView(easing: Quart.easeIn)).to(haveValidSnapshot())
+        expect(EasingTestView(easing: Ease.Quart.easeIn)).to(haveValidSnapshot())
       }
       
       it("has valid out graph") {
-        expect(EasingTestView(easing: Quart.easeOut)).to(haveValidSnapshot())
+        expect(EasingTestView(easing: Ease.Quart.easeOut)).to(haveValidSnapshot())
       }
       
       it("has valid inOut graph") {
-        expect(EasingTestView(easing: Quart.easeInOut)).to(haveValidSnapshot())
+        expect(EasingTestView(easing: Ease.Quart.easeInOut)).to(haveValidSnapshot())
       }
       
     }
@@ -67,15 +67,15 @@ class EasingSpec: QuickSpec {
     describe("sin") {
       
       it("has valid in graph") {
-        expect(EasingTestView(easing: Sin.easeIn)).to(haveValidSnapshot())
+        expect(EasingTestView(easing: Ease.Sin.easeIn)).to(haveValidSnapshot())
       }
       
       it("has valid out graph") {
-        expect(EasingTestView(easing: Sin.easeOut)).to(haveValidSnapshot())
+        expect(EasingTestView(easing: Ease.Sin.easeOut)).to(haveValidSnapshot())
       }
       
       it("has valid inOut graph") {
-        expect(EasingTestView(easing: Sin.easeInOut)).to(haveValidSnapshot())
+        expect(EasingTestView(easing: Ease.Sin.easeInOut)).to(haveValidSnapshot())
       }
       
     }
@@ -83,15 +83,15 @@ class EasingSpec: QuickSpec {
     describe("expo") {
       
       it("has valid in graph") {
-        expect(EasingTestView(easing: Expo.easeIn)).to(haveValidSnapshot())
+        expect(EasingTestView(easing: Ease.Expo.easeIn)).to(haveValidSnapshot())
       }
       
       it("has valid out graph") {
-        expect(EasingTestView(easing: Expo.easeOut)).to(haveValidSnapshot())
+        expect(EasingTestView(easing: Ease.Expo.easeOut)).to(haveValidSnapshot())
       }
       
       it("has valid inOut graph") {
-        expect(EasingTestView(easing: Expo.easeInOut)).to(haveValidSnapshot())
+        expect(EasingTestView(easing: Ease.Expo.easeInOut)).to(haveValidSnapshot())
       }
       
     }
@@ -99,15 +99,15 @@ class EasingSpec: QuickSpec {
     describe("circ") {
       
       it("has valid in graph") {
-        expect(EasingTestView(easing: Circ.easeIn)).to(haveValidSnapshot())
+        expect(EasingTestView(easing: Ease.Circ.easeIn)).to(haveValidSnapshot())
       }
       
       it("has valid out graph") {
-        expect(EasingTestView(easing: Circ.easeOut)).to(haveValidSnapshot())
+        expect(EasingTestView(easing: Ease.Circ.easeOut)).to(haveValidSnapshot())
       }
       
       it("has valid inOut graph") {
-        expect(EasingTestView(easing: Circ.easeInOut)).to(haveValidSnapshot())
+        expect(EasingTestView(easing: Ease.Circ.easeInOut)).to(haveValidSnapshot())
       }
       
     }
@@ -115,15 +115,15 @@ class EasingSpec: QuickSpec {
     describe("elastic") {
       
       it("has valid in graph") {
-        expect(EasingTestView(easing: Elastic.easeIn)).to(haveValidSnapshot())
+        expect(EasingTestView(easing: Ease.Elastic.easeIn)).to(haveValidSnapshot())
       }
       
       it("has valid out graph") {
-        expect(EasingTestView(easing: Elastic.easeOut)).to(haveValidSnapshot())
+        expect(EasingTestView(easing: Ease.Elastic.easeOut)).to(haveValidSnapshot())
       }
       
       it("has valid inOut graph") {
-        expect(EasingTestView(easing: Elastic.easeInOut)).to(haveValidSnapshot())
+        expect(EasingTestView(easing: Ease.Elastic.easeInOut)).to(haveValidSnapshot())
       }
       
     }

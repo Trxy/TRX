@@ -15,7 +15,7 @@ class Morphable_CGPointSpec: QuickSpec {
       subject = Tween(from: startingPoint,
         to: finalPoint,
         time: 1,
-        ease: Linear.linear,
+        ease: Ease.Linear.linear,
         update: {
           currentPoint = $0
       })

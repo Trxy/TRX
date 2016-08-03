@@ -7,7 +7,7 @@ import Foundation
     func trxCenterTo(to: CGPoint,
                        time: NSTimeInterval = 0.3,
                        delay: NSTimeInterval = 0,
-                       ease: EaseFunction = Quart.easeInOut,
+                       ease: Ease.EaseFunction = Ease.Quart.easeInOut,
                        onStart: StartClosure? = nil,
                        onComplete: CompletionClosure? = nil,
                        onUpdate: Tween<CGPoint>.UpdateClosure? = nil) {
@@ -26,7 +26,7 @@ import Foundation
     func trxCenterFrom(from: CGPoint,
                          time: NSTimeInterval = 0.3,
                          delay: NSTimeInterval = 0,
-                         ease: EaseFunction = Quart.easeInOut,
+                         ease: Ease.EaseFunction = Ease.Quart.easeInOut,
                          onStart: StartClosure? = nil,
                          onComplete: CompletionClosure? = nil,
                          onUpdate: Tween<CGPoint>.UpdateClosure? = nil) {
@@ -45,7 +45,7 @@ import Foundation
     func trxFrameTo(to: CGRect,
                       time: NSTimeInterval = 0.3,
                       delay: NSTimeInterval = 0,
-                      ease: EaseFunction = Quart.easeInOut,
+                      ease: Ease.EaseFunction = Ease.Quart.easeInOut,
                       onStart: StartClosure? = nil,
                       onComplete: CompletionClosure? = nil,
                       onUpdate: Tween<CGRect>.UpdateClosure? = nil) {
@@ -64,7 +64,7 @@ import Foundation
     func trxFrameFrom(from: CGRect,
                         time: NSTimeInterval = 0.3,
                         delay: NSTimeInterval = 0,
-                        ease: EaseFunction = Quart.easeInOut,
+                        ease: Ease.EaseFunction = Ease.Quart.easeInOut,
                         onStart: StartClosure? = nil,
                         onComplete: CompletionClosure? = nil,
                         onUpdate: Tween<CGRect>.UpdateClosure? = nil) {
