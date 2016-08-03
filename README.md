@@ -17,7 +17,7 @@
 
 ![Tricks](https://trxy.github.io/TRX/tricks.gif)
 
-Have a look at [Tricks](https://github.com/Trxy/Tricks), the example app for use cases
+Have a look at [Tricks](https://github.com/Trxy/Tricks) the example app.
 
 ## Using TRX
 
@@ -35,7 +35,7 @@ or neater...
 1.trxTo(20) { object.value = $0 }.start()
 ```
 
-Tween `Double`, `CGPoint`, `CGSize`, `CGRect` 
+Tween `Double`, `CGFloat`, `CGPoint`, `CGSize`, `CGRect` 
 or even your own type (by extending the Morphable Protocol)
 
 ```swift

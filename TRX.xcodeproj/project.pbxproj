@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		10498C2EB1DCF41C279F4C1F /* Pods_TRXTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64AEF7597538DD831930176 /* Pods_TRXTests.framework */; };
 		667AEFD81D460A7D004E291C /* TRX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 663E81411D45FC6F00130EB5 /* TRX.framework */; };
+		6699A18F1D51F36200F530F6 /* Morphable+CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6699A18E1D51F36200F530F6 /* Morphable+CGFloat.swift */; };
+		6699A1911D51F5B400F530F6 /* Morphable+CGFloatSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6699A1901D51F5B400F530F6 /* Morphable+CGFloatSpec.swift */; };
 		66E5EC591D461C3C00C2B1DA /* Tween.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E5EC391D461C3C00C2B1DA /* Tween.swift */; };
 		66E5EC5A1D461C3C00C2B1DA /* TimeLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E5EC3B1D461C3C00C2B1DA /* TimeLine.swift */; };
 		66E5EC5B1D461C3C00C2B1DA /* Tween+Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E5EC3D1D461C3C00C2B1DA /* Tween+Double.swift */; };
@@ -98,6 +100,8 @@
 		667AEFAC1D4606B9004E291C /* TRX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRX.h; sourceTree = "<group>"; };
 		667AEFD31D460A7D004E291C /* TRXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TRXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		667AEFD71D460A7D004E291C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6699A18E1D51F36200F530F6 /* Morphable+CGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Morphable+CGFloat.swift"; sourceTree = "<group>"; };
+		6699A1901D51F5B400F530F6 /* Morphable+CGFloatSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Morphable+CGFloatSpec.swift"; sourceTree = "<group>"; };
 		66E5EC391D461C3C00C2B1DA /* Tween.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tween.swift; sourceTree = "<group>"; };
 		66E5EC3B1D461C3C00C2B1DA /* TimeLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLine.swift; sourceTree = "<group>"; };
 		66E5EC3D1D461C3C00C2B1DA /* Tween+Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tween+Double.swift"; sourceTree = "<group>"; };
@@ -278,6 +282,7 @@
 				66E5EC471D461C3C00C2B1DA /* Morphable+CGPoint.swift */,
 				66E5EC481D461C3C00C2B1DA /* Morphable+CGRect.swift */,
 				66E5EC491D461C3C00C2B1DA /* Morphable+CGSize.swift */,
+				6699A18E1D51F36200F530F6 /* Morphable+CGFloat.swift */,
 				66E5EC4A1D461C3C00C2B1DA /* Morphable+Double.swift */,
 				66E5EC4B1D461C3C00C2B1DA /* Morphable.swift */,
 			);
@@ -344,6 +349,7 @@
 				66E5EC7A1D461DCA00C2B1DA /* Morphable+CGPointSpec.swift */,
 				66E5EC7B1D461DCA00C2B1DA /* Morphable+CGRectSpec.swift */,
 				66E5EC7C1D461DCA00C2B1DA /* Morphable+CGSizeSpec.swift */,
+				6699A1901D51F5B400F530F6 /* Morphable+CGFloatSpec.swift */,
 			);
 			path = morphable;
 			sourceTree = "<group>";
@@ -613,6 +619,7 @@
 				66E5EC611D461C3C00C2B1DA /* Scheduler.swift in Sources */,
 				66E5EC601D461C3C00C2B1DA /* Schedulable.swift in Sources */,
 				66E5EC6A1D461C3C00C2B1DA /* Circ.swift in Sources */,
+				6699A18F1D51F36200F530F6 /* Morphable+CGFloat.swift in Sources */,
 				66E5EC641D461C3C00C2B1DA /* Morphable+CGRect.swift in Sources */,
 				66E5EC671D461C3C00C2B1DA /* Morphable.swift in Sources */,
 				66E5EC5C1D461C3C00C2B1DA /* Tween+UIView.swift in Sources */,
@@ -679,6 +686,7 @@
 				66E5ECB01D461DCA00C2B1DA /* EasingTestView.swift in Sources */,
 				66E5ECAC1D461DCA00C2B1DA /* TweenSpec.swift in Sources */,
 				66E5ECA71D461DCA00C2B1DA /* Morphable+CGRectSpec.swift in Sources */,
+				6699A1911D51F5B400F530F6 /* Morphable+CGFloatSpec.swift in Sources */,
 				66E5ECAA1D461DCA00C2B1DA /* TweenableSharedExmaples.swift in Sources */,
 				66E5ECAE1D461DCA00C2B1DA /* MockSubscriber.swift in Sources */,
 				66E5ECA91D461DCA00C2B1DA /* SchedulerSpec.swift in Sources */,
