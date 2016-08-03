@@ -4,18 +4,13 @@ public extension Ease {
   
   /**
    
-   Linear Easing Functions
+   Linear Easing Function
    
    */
   
-  public struct Linear {
-    
-    /// Linear
-    public static let linear: TimingFunction = {
-      t, b, c, d in
-      c * t / d + b
-    }
-    
+  public static let linear: TimingFunction = {
+    t, b, c, d in
+    c * t / d + b
   }
   
 }

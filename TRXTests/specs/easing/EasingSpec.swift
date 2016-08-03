@@ -11,7 +11,7 @@ class EasingSpec: QuickSpec {
     describe("Linear") {
       
       it("has valid graph") {
-        expect(EasingTestView(easing: Ease.Linear.linear)).to(haveValidSnapshot())
+        expect(EasingTestView(easing: Ease.linear)).to(haveValidSnapshot())
       }
   
     }

@@ -15,7 +15,7 @@ class Morphable_CGRectSpec: QuickSpec {
       subject = Tween(from: startingRect,
         to: finalRect,
         time: 1,
-        ease: Ease.Linear.linear,
+        ease: Ease.linear,
         update: {
           currentRect = $0
       })

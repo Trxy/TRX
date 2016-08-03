@@ -15,7 +15,7 @@ class Morphable_CGSizeSpec: QuickSpec{
       subject = Tween(from: startingSize,
         to: finalSize,
         time: 1,
-        ease: Ease.Linear.linear,
+        ease: Ease.linear,
         update: {
           currentSize = $0
       })
