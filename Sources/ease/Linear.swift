@@ -11,7 +11,7 @@ public extension Ease {
   public struct Linear {
     
     /// Linear
-    public static let linear: EaseFunction = {
+    public static let linear: TimingFunction = {
       t, b, c, d in
       c * t / d + b
     }

@@ -22,8 +22,8 @@ final public class Tween<T: Morphable>: AbstractTweenable, Tweenable, Updatable 
   /// End value (Morphable)
   public let to: T
   
-  /// Timing function (EaseFunction)
-  public let ease: Ease.EaseFunction
+  /// Timing function (TimingFunction)
+  public let ease: Ease.TimingFunction
   
   /// Duration (seconds)
   private(set) public var time: NSTimeInterval
@@ -45,7 +45,7 @@ final public class Tween<T: Morphable>: AbstractTweenable, Tweenable, Updatable 
    - Parameter to: End value (Morphable).
    - Parameter time: Duration (seconds).
    - Parameter delay: (optional) Time offset (seconds). Defaults to 0.
-   - Parameter ease: (optional) Timing function (EaseFunction). Defaults to Linear.linear.
+   - Parameter ease: (optional) Timing function (TimingFunction). Defaults to Linear.linear.
    - Parameter key: (optional) Tween key (String). Any other running animation with the same key will be stopped. Defaults to nil.
    - Parameter onStart: (optional) Start callback. Defaults to nil.
    - Parameter onComplete: (optional) Completion callback. Defaults to nil.
@@ -55,7 +55,7 @@ final public class Tween<T: Morphable>: AbstractTweenable, Tweenable, Updatable 
                        to: T,
                        time: NSTimeInterval,
                        delay: NSTimeInterval = 0,
-                       ease: Ease.EaseFunction = Ease.Linear.linear,
+                       ease: Ease.TimingFunction = Ease.Linear.linear,
                        key: String? = nil,
                        onStart: StartClosure? = nil,
                        onComplete: CompletionClosure? = nil,

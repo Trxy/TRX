@@ -11,7 +11,7 @@ public extension Ease {
   public struct Elastic {
     
     /// Ease in
-    public static let easeIn: EaseFunction = {
+    public static let easeIn: TimingFunction = {
       t, b, c, d in
       if t == 0 { return b }
       let t = t / d
@@ -22,7 +22,7 @@ public extension Ease {
     }
     
     /// Ease out
-    public static let easeOut: EaseFunction = {
+    public static let easeOut: TimingFunction = {
       t, b, c, d in
       if t == 0 { return b }
       let t = t / d
@@ -33,7 +33,7 @@ public extension Ease {
     }
     
     /// Ease in out
-    public static let easeInOut: EaseFunction = {
+    public static let easeInOut: TimingFunction = {
       t, b, c, d in
       if t == 0 { return b }
       let t = t / (d / 2)

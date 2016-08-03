@@ -11,14 +11,14 @@ public extension Ease {
   public struct Circ {
     
     /// Ease in
-    public static let easeIn: EaseFunction = {
+    public static let easeIn: TimingFunction = {
       t, b, c, d in
       var t = t / d;
       return -c * (sqrt(1 - t * t) - 1) + b
     }
     
     /// Ease out
-    public static let easeOut: EaseFunction = {
+    public static let easeOut: TimingFunction = {
       t, b, c, d in
       var t = t / d;
       t -= 1
@@ -26,7 +26,7 @@ public extension Ease {
     }
     
     /// Ease in out
-    public static let easeInOut: EaseFunction = {
+    public static let easeInOut: TimingFunction = {
       t, b, c, d in
       var t = t / (d / 2);
       if t < 1 {

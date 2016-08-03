@@ -4,7 +4,7 @@ public extension Double {
   public func trxTo(to: Double,
              time: NSTimeInterval = 0.3,
              delay: NSTimeInterval = 0,
-             ease: Ease.EaseFunction = Ease.Quad.easeOut,
+             ease: Ease.TimingFunction = Ease.Quad.easeOut,
              key: String? = nil,
              onStart: StartClosure? = nil,
              onComplete: CompletionClosure? = nil,
