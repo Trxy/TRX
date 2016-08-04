@@ -35,7 +35,7 @@ or neater...
 1.trxTo(20) { object.value = $0 }.start()
 ```
 
-Tween `Double`, `CGFloat`, `CGPoint`, `CGSize`, `CGRect` 
+Tween `Double`, `CGFloat`, `CGPoint`, `CGSize`, `CGRect`, `CGAffineTransform`, `CATransform3D` 
 or even your own type (by extending the Morphable Protocol)
 
 ```swift

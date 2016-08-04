@@ -1,11 +1,10 @@
+import Foundation
+
 /**
  
  Adds Morphable conformance to Double
  
  */
-
-import Foundation
-
 extension Double: Morphable {
   
   /**
@@ -19,9 +18,9 @@ extension Double: Morphable {
     return ratio
   }
   
-  /// Initial ratio value (usually 0.0 or self if Double convertible)
+  /// Initial normalized value (usually 0.0 or self if Double convertible)
   public var initialValue: Double { return self }
   
-  /// Final ratio value (usually 1.0 or self if Double convertible)
+  /// Final normalized value (usually 1.0 or self if Double convertible)
   public var finalValue: Double { return self }
 }

@@ -1,11 +1,10 @@
+import QuartzCore
+
 /**
  
  Adds Morphable conformance to CGSize
  
  */
-
-import QuartzCore
-
 extension CGSize: Morphable {
   
   /**
@@ -16,13 +15,12 @@ extension CGSize: Morphable {
   public static func morph(from: CGSize,
                            to: CGSize,
                            ratio: Double) -> CGSize {
-    return CGSize(width: from.width + (to.width - from.width) * CGFloat(ratio),
-                  height: from.height + (to.height - from.height) * CGFloat(ratio))
+    return CGSize(width: morpher.tween(from.width, to: to.width, ratio: ratio),
+                  height: morpher.tween(from.height, to: to.height, ratio: ratio))
   }
-  
-  /// Initial ratio value (usually 0.0 or self if Double convertible)
+  /// Initial normalized value (usually 0.0 or self if Double convertible)
   public var initialValue: Double { return 0 }
   
-  /// Final ratio value (usually 1.0 or self if Double convertible)
-  public var finalValue: Double { return 1 }
+  /// Final normalized value (usually 1.0 or self if Double convertible)
+  public var finalValue: Double { return Double(morpher.precision) }
 }

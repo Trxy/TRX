@@ -1,12 +1,11 @@
+import Foundation
+
 /**
  
  Make a value conform to this protocol
  to enable Tweening
  
  */
-
-import Foundation
-
 public protocol Morphable {
   
   /**

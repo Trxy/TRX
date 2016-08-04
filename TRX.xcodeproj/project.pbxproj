@@ -8,9 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		10498C2EB1DCF41C279F4C1F /* Pods_TRXTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64AEF7597538DD831930176 /* Pods_TRXTests.framework */; };
+		66728B5D1D6B2A3A00F827CF /* FloatMorpher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66728B5C1D6B2A3A00F827CF /* FloatMorpher.swift */; };
 		667AEFD81D460A7D004E291C /* TRX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 663E81411D45FC6F00130EB5 /* TRX.framework */; };
 		6699A18F1D51F36200F530F6 /* Morphable+CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6699A18E1D51F36200F530F6 /* Morphable+CGFloat.swift */; };
 		6699A1911D51F5B400F530F6 /* Morphable+CGFloatSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6699A1901D51F5B400F530F6 /* Morphable+CGFloatSpec.swift */; };
+		6699A1941D51FD2200F530F6 /* Morphable+CGAffineTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6699A1921D51FC3000F530F6 /* Morphable+CGAffineTransform.swift */; };
+		6699A1951D51FD2300F530F6 /* Morphable+CGAffineTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6699A1921D51FC3000F530F6 /* Morphable+CGAffineTransform.swift */; };
+		6699A1961D51FD2600F530F6 /* Morphable+CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6699A18E1D51F36200F530F6 /* Morphable+CGFloat.swift */; };
+		6699A1991D51FF3A00F530F6 /* Morphable+CATransform3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6699A1971D51FE3400F530F6 /* Morphable+CATransform3D.swift */; };
+		6699A19A1D51FF3B00F530F6 /* Morphable+CATransform3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6699A1971D51FE3400F530F6 /* Morphable+CATransform3D.swift */; };
+		669DCE2E1D6B240B0005CB15 /* Morphable+CGAffineTransformSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669DCE2D1D6B240B0005CB15 /* Morphable+CGAffineTransformSpec.swift */; };
+		669DCE301D6B24290005CB15 /* Morphable+CATransform3DSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669DCE2F1D6B24290005CB15 /* Morphable+CATransform3DSpec.swift */; };
 		66E5EC591D461C3C00C2B1DA /* Tween.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E5EC391D461C3C00C2B1DA /* Tween.swift */; };
 		66E5EC5A1D461C3C00C2B1DA /* TimeLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E5EC3B1D461C3C00C2B1DA /* TimeLine.swift */; };
 		66E5EC5B1D461C3C00C2B1DA /* Tween+Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E5EC3D1D461C3C00C2B1DA /* Tween+Double.swift */; };
@@ -95,6 +103,7 @@
 		4FDB8A670D5D07A4F7D81EBC /* Pods-TRXTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRXTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TRXTests/Pods-TRXTests.debug.xcconfig"; sourceTree = "<group>"; };
 		663E81411D45FC6F00130EB5 /* TRX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TRX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		663E814B1D45FD5B00130EB5 /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
+		66728B5C1D6B2A3A00F827CF /* FloatMorpher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatMorpher.swift; sourceTree = "<group>"; };
 		667AEFA21D460530004E291C /* TRX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TRX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		667AEFAA1D4605DA004E291C /* Info-tvOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		667AEFAC1D4606B9004E291C /* TRX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRX.h; sourceTree = "<group>"; };
@@ -102,6 +111,10 @@
 		667AEFD71D460A7D004E291C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6699A18E1D51F36200F530F6 /* Morphable+CGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Morphable+CGFloat.swift"; sourceTree = "<group>"; };
 		6699A1901D51F5B400F530F6 /* Morphable+CGFloatSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Morphable+CGFloatSpec.swift"; sourceTree = "<group>"; };
+		6699A1921D51FC3000F530F6 /* Morphable+CGAffineTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Morphable+CGAffineTransform.swift"; sourceTree = "<group>"; };
+		6699A1971D51FE3400F530F6 /* Morphable+CATransform3D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Morphable+CATransform3D.swift"; sourceTree = "<group>"; };
+		669DCE2D1D6B240B0005CB15 /* Morphable+CGAffineTransformSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Morphable+CGAffineTransformSpec.swift"; sourceTree = "<group>"; };
+		669DCE2F1D6B24290005CB15 /* Morphable+CATransform3DSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Morphable+CATransform3DSpec.swift"; sourceTree = "<group>"; };
 		66E5EC391D461C3C00C2B1DA /* Tween.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tween.swift; sourceTree = "<group>"; };
 		66E5EC3B1D461C3C00C2B1DA /* TimeLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLine.swift; sourceTree = "<group>"; };
 		66E5EC3D1D461C3C00C2B1DA /* Tween+Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tween+Double.swift"; sourceTree = "<group>"; };
@@ -279,12 +292,15 @@
 		66E5EC461D461C3C00C2B1DA /* morphable */ = {
 			isa = PBXGroup;
 			children = (
+				66E5EC4B1D461C3C00C2B1DA /* Morphable.swift */,
+				66E5EC4A1D461C3C00C2B1DA /* Morphable+Double.swift */,
 				66E5EC471D461C3C00C2B1DA /* Morphable+CGPoint.swift */,
 				66E5EC481D461C3C00C2B1DA /* Morphable+CGRect.swift */,
 				66E5EC491D461C3C00C2B1DA /* Morphable+CGSize.swift */,
 				6699A18E1D51F36200F530F6 /* Morphable+CGFloat.swift */,
-				66E5EC4A1D461C3C00C2B1DA /* Morphable+Double.swift */,
-				66E5EC4B1D461C3C00C2B1DA /* Morphable.swift */,
+				6699A1921D51FC3000F530F6 /* Morphable+CGAffineTransform.swift */,
+				6699A1971D51FE3400F530F6 /* Morphable+CATransform3D.swift */,
+				66728B5C1D6B2A3A00F827CF /* FloatMorpher.swift */,
 			);
 			path = morphable;
 			sourceTree = "<group>";
@@ -350,6 +366,8 @@
 				66E5EC7B1D461DCA00C2B1DA /* Morphable+CGRectSpec.swift */,
 				66E5EC7C1D461DCA00C2B1DA /* Morphable+CGSizeSpec.swift */,
 				6699A1901D51F5B400F530F6 /* Morphable+CGFloatSpec.swift */,
+				669DCE2D1D6B240B0005CB15 /* Morphable+CGAffineTransformSpec.swift */,
+				669DCE2F1D6B24290005CB15 /* Morphable+CATransform3DSpec.swift */,
 			);
 			path = morphable;
 			sourceTree = "<group>";
@@ -619,6 +637,7 @@
 				66E5EC611D461C3C00C2B1DA /* Scheduler.swift in Sources */,
 				66E5EC601D461C3C00C2B1DA /* Schedulable.swift in Sources */,
 				66E5EC6A1D461C3C00C2B1DA /* Circ.swift in Sources */,
+				6699A1951D51FD2300F530F6 /* Morphable+CGAffineTransform.swift in Sources */,
 				6699A18F1D51F36200F530F6 /* Morphable+CGFloat.swift in Sources */,
 				66E5EC641D461C3C00C2B1DA /* Morphable+CGRect.swift in Sources */,
 				66E5EC671D461C3C00C2B1DA /* Morphable.swift in Sources */,
@@ -627,9 +646,11 @@
 				66E5EC6B1D461C3C00C2B1DA /* Cubic.swift in Sources */,
 				66E5EC5E1D461C3C00C2B1DA /* Dispatcher.swift in Sources */,
 				66E5EC721D461C3C00C2B1DA /* Sin.swift in Sources */,
+				66728B5D1D6B2A3A00F827CF /* FloatMorpher.swift in Sources */,
 				66E5EC5F1D461C3C00C2B1DA /* Proxy.swift in Sources */,
 				66E5EC6D1D461C3C00C2B1DA /* Elastic.swift in Sources */,
 				66E5EC5A1D461C3C00C2B1DA /* TimeLine.swift in Sources */,
+				6699A19A1D51FF3B00F530F6 /* Morphable+CATransform3D.swift in Sources */,
 				66E5EC6C1D461C3C00C2B1DA /* Ease.swift in Sources */,
 				66E5EC6E1D461C3C00C2B1DA /* Expo.swift in Sources */,
 				66E5EC651D461C3C00C2B1DA /* Morphable+CGSize.swift in Sources */,
@@ -665,7 +686,9 @@
 				66E5ECC91D463C4C00C2B1DA /* TimeLine.swift in Sources */,
 				66E5ECDB1D463C7F00C2B1DA /* Ease.swift in Sources */,
 				66E5ECDD1D463C7F00C2B1DA /* Expo.swift in Sources */,
+				6699A1991D51FF3A00F530F6 /* Morphable+CATransform3D.swift in Sources */,
 				66E5ECD41D463C6E00C2B1DA /* Morphable+CGSize.swift in Sources */,
+				6699A1941D51FD2200F530F6 /* Morphable+CGAffineTransform.swift in Sources */,
 				66E5ECE01D463C7F00C2B1DA /* Quart.swift in Sources */,
 				66E5ECD51D463C6E00C2B1DA /* Morphable+Double.swift in Sources */,
 				66E5ECD11D463C6100C2B1DA /* Subscriber.swift in Sources */,
@@ -675,6 +698,7 @@
 				66E5ECCA1D463C5100C2B1DA /* Tween+Double.swift in Sources */,
 				66E5ECD81D463C7800C2B1DA /* Tweenable.swift in Sources */,
 				66E5ECDE1D463C7F00C2B1DA /* Linear.swift in Sources */,
+				6699A1961D51FD2600F530F6 /* Morphable+CGFloat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,9 +715,11 @@
 				66E5ECAE1D461DCA00C2B1DA /* MockSubscriber.swift in Sources */,
 				66E5ECA91D461DCA00C2B1DA /* SchedulerSpec.swift in Sources */,
 				66E5ECAD1D461DCA00C2B1DA /* MockScheduler.swift in Sources */,
+				669DCE301D6B24290005CB15 /* Morphable+CATransform3DSpec.swift in Sources */,
 				66E5ECAB1D461DCA00C2B1DA /* TimeLineSpec.swift in Sources */,
 				66E5ECC71D461DCA00C2B1DA /* TweenFactory.swift in Sources */,
 				66E5ECA61D461DCA00C2B1DA /* Morphable+CGPointSpec.swift in Sources */,
+				669DCE2E1D6B240B0005CB15 /* Morphable+CGAffineTransformSpec.swift in Sources */,
 				66E5ECA81D461DCA00C2B1DA /* Morphable+CGSizeSpec.swift in Sources */,
 				66E5ECA51D461DCA00C2B1DA /* EasingSpec.swift in Sources */,
 			);

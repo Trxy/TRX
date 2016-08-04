@@ -1,11 +1,9 @@
+import QuartzCore
 /**
  
  Adds Morphable conformance to CGRect
  
  */
-
-import QuartzCore
-
 extension CGRect: Morphable {
   
   /**
@@ -20,9 +18,9 @@ extension CGRect: Morphable {
                   size: CGSize.morph(from.size, to: to.size, ratio: ratio))
   }
   
-  /// Initial ratio value (usually 0.0 or self if Double convertible)
+  /// Initial normalized value (usually 0.0 or self if Double convertible)
   public var initialValue: Double { return 0 }
   
-  /// Final ratio value (usually 1.0 or self if Double convertible)
-  public var finalValue: Double { return 1 }
+  /// Final normalized value (usually 1.0 or self if Double convertible)
+  public var finalValue: Double { return Double(morpher.precision) }
 }
