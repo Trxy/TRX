@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
   s.name             = "TRX"
-  s.version          = "0.1.0"
+  s.version          = "0.2.0"
   s.summary          = "Squeeze, chain, overlap, seek. A powerful swift animation framework."
   s.description      = <<-DESC
                         A versatile animation framework built with ease of use, powerful features and performance in mind. TRX is inspired by the the excellent JavaScript animation framework GSAP.
                       DESC
 
   s.homepage         = "https://github.com/Trxy/TRX"
-  # s.screenshots     = "https://github.com/Trxy/TRX/meta/screenshots_1", "https://github.com/Trxy/TRX/meta/screenshots_2"
+  s.screenshots      = "https://trxy.github.io/TRX/trx.png"
   s.license          = 'MIT'
   s.author           = "Adam Modzelewski"
   s.source           = { :git => "https://github.com/Trxy/TRX.git", :tag => s.version.to_s }
