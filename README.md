@@ -138,6 +138,14 @@ Add to your [Cartfile](https://github.com/Carthage/Carthage):
 github "Trxy/TRX"
 ```
 
+### Swift Package Manager (Experimental)
+Specify a dependency in [Package.swift](https://swift.org/package-manager/)
+```swift
+...
+.Package(url: "https://github.com/Trxy/TRX.git", majorVersion: 0, minor: 2),
+...
+```
+
 ### Manual
 
 1. Download or clone the project
