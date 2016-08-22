@@ -78,8 +78,10 @@ Use a Timeline to chain Tweens or even other timelines
 TimeLine(tweens: [
   1.trxTo(20) { object.value = $0 },
   30.trxTo(40) { object.value = $0 },
+  40.trxTo(50) { object.value = $0 },
   ]).start()
 ```
+![Timeline](https://trxy.github.io/TRX/docs/timeline.png)
 
 Add tween with an overlap
 
@@ -89,6 +91,7 @@ timeline.add(1.trxTo(20) { object.value = $0 })
 timeline.add(30.trxTo(40) { anOtherObject.value = $0 }, shift: -0.5)
 timeline.start()
 ```
+![Timeline with an overlap](https://trxy.github.io/TRX/docs/timeline_overlap.png)
 
 Squeeze and stretch tweens or timelines
 
@@ -140,9 +143,9 @@ github "Trxy/TRX"
 
 ### Swift Package Manager (Experimental)
 Specify a dependency in [Package.swift](https://swift.org/package-manager/)
-```swift
+```
 ...
-.Package(url: "https://github.com/Trxy/TRX.git", majorVersion: 0, minor: 2),
+.Package(url: "https://github.com/Trxy/TRX.git", majorVersion: 0, minor: 3),
 ...
 ```
 
