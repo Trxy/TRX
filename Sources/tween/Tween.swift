@@ -90,10 +90,11 @@ final public class Tween<T: Morphable>: AbstractTweenable, Tweenable, Updatable 
       b: from.initialValue,
       c: span,
       d: duration - delay)
-    onUpdate(value: T.morph(
+    let morphedValue = T.morph(
       from,
       to: to,
-      ratio: ratio))
+      ratio: ratio)
+    onUpdate(value: head != duration ? morphedValue : to)
   }
   
   //MARK: reverse
