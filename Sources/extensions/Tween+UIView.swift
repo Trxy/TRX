@@ -1,5 +1,3 @@
-import Foundation
-
 #if os(iOS) || os(tvOS)
   import UIKit
   extension UIView {

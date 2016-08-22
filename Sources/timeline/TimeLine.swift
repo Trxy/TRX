@@ -4,9 +4,6 @@
  Use a Timelines to chain Tweens or even other Timelines.
  
  */
-
-import Foundation
-
 final public class TimeLine: AbstractTweenable, Tweenable {
   
   //MARK: nested

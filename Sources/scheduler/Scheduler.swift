@@ -1,11 +1,10 @@
+import QuartzCore
+
 /**
  
  Dispatches time events to subscribers
  
  */
-
-import QuartzCore
-
 final public class Scheduler: Dispatcher {
   
   /// Shared singleton

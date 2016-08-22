@@ -7,7 +7,6 @@ public extension Ease {
    Sine Easing Functions
    
    */
-  
   public struct Sin {
     
     /// Ease in

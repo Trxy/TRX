@@ -1,5 +1,3 @@
-import Foundation
-
 protocol Dispatcher {
   
   func subscribe(subscriber: Subscriber)

@@ -1,5 +1,3 @@
-import Foundation
-
 /**
  
  Adds Morphable conformance to Double

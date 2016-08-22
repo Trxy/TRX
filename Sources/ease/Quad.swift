@@ -7,7 +7,6 @@ public extension Ease {
    Quad Easing Functions
    
    */
-  
   public struct Quad {
     
     /// Ease in

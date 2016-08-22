@@ -1,5 +1,3 @@
-import Foundation
-
 public extension Ease {
   
   /**
@@ -7,7 +5,6 @@ public extension Ease {
    Cubic Easing Functions
    
    */
-  
   public struct Cubic {
     
     /// Ease in

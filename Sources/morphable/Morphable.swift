@@ -1,5 +1,3 @@
-import Foundation
-
 /**
  
  Make a value conform to this protocol

@@ -3,13 +3,6 @@
  Animates any numerical value
  
  */
-
-import Foundation
-
-protocol Updatable {
-  func update()
-}
-
 final public class Tween<T: Morphable>: AbstractTweenable, Tweenable, Updatable {
 
   public typealias UpdateClosure = (value: T) -> ()

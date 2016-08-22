@@ -1,4 +1,5 @@
-import QuartzCore
+import CoreGraphics
+
 /**
  
  Adds Morphable conformance to CGRect

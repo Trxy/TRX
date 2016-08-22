@@ -1,5 +1,3 @@
-import Foundation
-
 public extension Double {
   public func trxTo(to: Double,
              time: NSTimeInterval = 0.3,

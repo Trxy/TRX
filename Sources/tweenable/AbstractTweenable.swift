@@ -3,9 +3,6 @@
  Tweenable base class
  
  */
-
-import Foundation
-
 public class AbstractTweenable: Subscriber, Schedulable {
   
   /// Start callback

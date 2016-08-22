@@ -1,5 +1,3 @@
-import Foundation
-
 public extension Ease {
   
   /**
@@ -7,7 +5,6 @@ public extension Ease {
    Circ Easing Functions
    
    */
-  
   public struct Circ {
     
     /// Ease in

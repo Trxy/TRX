@@ -1,5 +1,3 @@
-import Foundation
-
 func ==(lhs: Scheduler.Proxy, rhs: Scheduler.Proxy) -> Bool {
   return lhs === rhs
 }
