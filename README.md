@@ -83,12 +83,14 @@ TimeLine(tweens: [
 ```
 ![Timeline](https://trxy.github.io/TRX/docs/timeline.png)
 
-Add tween with an overlap
+Add tweens with overlap
 
 ```swift
-let timeline = TimeLine()
-timeline.add(1.trxTo(20) { object.value = $0 })
-timeline.add(30.trxTo(40) { anOtherObject.value = $0 }, shift: -0.5)
+let timeline: TimeLine = [
+  1.trxTo(20) { object.value = $0 }): 0,
+  30.trxTo(40) { anOtherObject.value = $0 }: -0.5,
+  40.trxTo(50) { anOtherObject.value = $0 }: -0.5
+]
 timeline.start()
 ```
 ![Timeline with an overlap](https://trxy.github.io/TRX/docs/timeline_overlap.png)

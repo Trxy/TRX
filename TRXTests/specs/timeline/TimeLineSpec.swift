@@ -42,7 +42,7 @@ class TimeLineSpec: QuickSpec {
     describe("when initialized with tweens") {
       
       beforeEach() {
-        subject = TimeLine(tweens: [tweenA, tweenB, tweenC])
+        subject = [tweenA, tweenB, tweenC]
       }
       
       it("updates first tween to initial position") {
@@ -58,7 +58,7 @@ class TimeLineSpec: QuickSpec {
       describe("init", {
         
         beforeEach({ 
-          subject = TimeLine(tweens: [tweenA, tweenB, tweenC])
+          subject = [tweenA, tweenB, tweenC]
         })
         
         it("should contain tweens") {
@@ -140,9 +140,11 @@ class TimeLineSpec: QuickSpec {
       context("shift") {
         
         beforeEach({
-          subject.add(tweenA, shift: 0.1)
-          subject.add(tweenB, shift: 0.2)
-          subject.add(tweenC, shift: -1.5)
+          subject = [
+            tweenA: 0.1,
+            tweenB: 0.2,
+            tweenC: -1.5,
+          ]
         })
         
         context("on start") {

@@ -4,7 +4,7 @@
  Use a Timelines to chain Tweens or even other Timelines.
  
  */
-final public class TimeLine: AbstractTweenable, Tweenable {
+final public class TimeLine: AbstractTweenable, Tweenable, ArrayLiteralConvertible, DictionaryLiteralConvertible {
   
   //MARK: nested
   
@@ -36,17 +36,48 @@ final public class TimeLine: AbstractTweenable, Tweenable {
   private var container = [TweenContainer]()
   var onUpdate: UpdateClosure?
   
-  //MARK: initializer
+  //MARK: initializers
   
   /**
-   Creates a new TimeLine
    
-   - Parameter tweens: (optional) An array of Tweenables
+   Creates new TimeLine
+   
+   - Parameter tweens: An array of Tweenables
+   
    */
-  public init(tweens: [Tweenable]? = nil) {
+  public init(tweens: [Tweenable]) {
     super.init()
-    tweens?.forEach { add($0) }
+    tweens.forEach { add($0) }
     moveToStart();
+  }
+  
+  /**
+   
+   Creates new TimeLine
+   
+   */
+  public override init() {
+    super.init()
+  }
+  
+  /**
+   
+   Creates new TimeLine from a literal array
+   
+   */
+  public convenience init(arrayLiteral elements: Tweenable...) {
+    self.init(tweens: elements)
+  }
+  
+  /**
+   
+   Creates new TimeLine from a literal dictionary
+   
+   */
+  public init(dictionaryLiteral elements: (Tweenable, Double)...) {
+    super.init()
+    elements.forEach { add($0.0, shift: $0.1) }
+    self.moveToStart();
   }
   
   //MARK: lifecycle
@@ -100,10 +131,12 @@ final public class TimeLine: AbstractTweenable, Tweenable {
   }
   
   /**
+   
    Add a Tweenable to Timeline
    
    - Parameter tween: Tweenable
    - Parameter shift: Delta to previous Tweenable (in seconds); defaults to 0
+   
    */
   public func add(tween: Tweenable, shift: NSTimeInterval = 0.0) {
     let start = duration + shift
