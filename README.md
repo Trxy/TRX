@@ -95,13 +95,13 @@ timeline.start()
 ```
 ![Timeline with an overlap](https://trxy.github.io/TRX/docs/timeline_overlap.png)
 
-Squeeze and stretch tweens or timelines
+### Squeeze and stretch tweens or timelines
 
 ```swift
 let tween = Tween(from: 0, to: 1, time: 0.5) { print($0) }
 
 tween.scale = 2 // duration: 1s
-timeline.duration = 2.0 // scale: 4
+tween.duration = 2.0 // scale: 4
 ```
 
 ## UIView integration
