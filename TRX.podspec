@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "TRX"
-  s.version          = "0.3.0"
+  s.version          = "0.3.1"
   s.summary          = "Squeeze, chain, overlap, seek. A powerful swift animation framework."
   s.description      = <<-DESC
                         A versatile animation framework built with ease of use, powerful features and performance in mind. TRX is inspired by the the excellent JavaScript animation framework GSAP.
