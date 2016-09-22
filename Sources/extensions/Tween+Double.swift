@@ -1,12 +1,12 @@
 public extension Double {
-  public func trxTo(to: Double,
-             time: NSTimeInterval = 0.3,
-             delay: NSTimeInterval = 0,
-             ease: Ease.TimingFunction = Ease.Quad.easeOut,
+  public func trxTo(_ to: Double,
+             time: TimeInterval = 0.3,
+             delay: TimeInterval = 0,
+             ease: @escaping Ease.TimingFunction = Ease.Quad.easeOut,
              key: String? = nil,
              onStart: StartClosure? = nil,
              onComplete: CompletionClosure? = nil,
-             onUpdate: Tween<Double>.UpdateClosure
+             onUpdate: @escaping Tween<Double>.UpdateClosure
     ) -> Tween<Double> {
     return Tween(from: self,
                  to: to,

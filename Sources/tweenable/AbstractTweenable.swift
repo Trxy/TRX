@@ -3,22 +3,22 @@
  Tweenable base class
  
  */
-public class AbstractTweenable: Subscriber, Schedulable {
+open class AbstractTweenable: Subscriber, Schedulable {
   
   /// Start callback
-  public var onStart: StartClosure?
+  open var onStart: StartClosure?
   
   /// Completion callback
-  public var onComplete: CompletionClosure?
+  open var onComplete: CompletionClosure?
   
   /// Animation Keys
-  public var keys: Set<String> = []
+  open var keys: Set<String> = []
   
   /// Current time offset (seconds)
-  internal(set) public var head: NSTimeInterval = 0
+  internal(set) open var head: TimeInterval = 0
   
   /// Pause or resume animation
-  public var paused : Bool = true {
+  open var paused : Bool = true {
     didSet {
       if paused != oldValue {
         pause()
@@ -40,7 +40,7 @@ public class AbstractTweenable: Subscriber, Schedulable {
   }
   
   func onInternalComplete() {
-      onComplete?(done: head == duration)
+      onComplete?(head == duration)
   }
   
   func onInternalStart() {
@@ -50,19 +50,19 @@ public class AbstractTweenable: Subscriber, Schedulable {
   }
   
   /// Duration (seconds)
-  public var duration: NSTimeInterval = 0
+  open var duration: TimeInterval = 0
   
   /**
    Move head to a specific time offset
    
    - Parameter delta: Time offset (seconds)
    */
-  final public func seek(delta: NSTimeInterval) {
+  final public func seek(_ delta: TimeInterval) {
     head = min(max(delta, 0), duration)
   }
   
   var scheduler: Dispatcher = Scheduler.shared
-  private var startTime: NSTimeInterval = 0
+  fileprivate var startTime: TimeInterval = 0
   
   /// Start the animation
   final public func start() {
@@ -74,7 +74,7 @@ public class AbstractTweenable: Subscriber, Schedulable {
     paused = true
   }
   
-  final func tick(time: NSTimeInterval) {
+  final func tick(_ time: TimeInterval) {
     if startTime == 0 {
       startTime = time
     }

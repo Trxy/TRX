@@ -56,8 +56,8 @@ class TweenSpec: QuickSpec {
         subject = Tween(from: 1,
           to: 4,
           time: 2,
-          ease: Ease.linear,
-          delay: 0.5) { currentValue = $0 }
+          delay: 0.5,
+          ease: Ease.linear) { currentValue = $0 }
       }
       
       context("duration") {
@@ -130,8 +130,8 @@ class TweenSpec: QuickSpec {
         subject = Tween(from: 1,
           to: 4,
           time: 2,
-          ease: Ease.linear,
-          delay: 1.0) { currentValue = $0 }
+          delay: 1.0,
+          ease: Ease.linear) { currentValue = $0 }
         subject.duration = 6.0
       }
       

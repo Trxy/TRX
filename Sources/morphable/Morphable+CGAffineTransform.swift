@@ -12,7 +12,7 @@ extension CGAffineTransform: Morphable {
    Returns the value converted by ratio
    
    */
-  public static func morph(from: CGAffineTransform,
+  public static func morph(_ from: CGAffineTransform,
                            to: CGAffineTransform,
                            ratio: Double) -> CGAffineTransform {
     return CGAffineTransform(a: morpher.tween(from.a, to: to.a, ratio: ratio),

@@ -12,7 +12,7 @@ extension CGSize: Morphable {
    Returns the value converted by ratio
    
    */
-  public static func morph(from: CGSize,
+  public static func morph(_ from: CGSize,
                            to: CGSize,
                            ratio: Double) -> CGSize {
     return CGSize(width: morpher.tween(from.width, to: to.width, ratio: ratio),

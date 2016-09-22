@@ -5,7 +5,7 @@
  */
 final public class Tween<T: Morphable>: AbstractTweenable, Tweenable, Updatable {
 
-  public typealias UpdateClosure = (value: T) -> ()
+  public typealias UpdateClosure = (_ value: T) -> ()
   
   //MARK: properties
   
@@ -19,10 +19,10 @@ final public class Tween<T: Morphable>: AbstractTweenable, Tweenable, Updatable 
   public let ease: Ease.TimingFunction
   
   /// Duration (seconds)
-  private(set) public var time: NSTimeInterval
+  fileprivate(set) public var time: TimeInterval
   
   /// Time offset (seconds)
-  private(set) public var delay: NSTimeInterval
+  fileprivate(set) public var delay: TimeInterval
 
   //MARK: callbacks
   
@@ -46,13 +46,13 @@ final public class Tween<T: Morphable>: AbstractTweenable, Tweenable, Updatable 
    */
   public required init(from: T,
                        to: T,
-                       time: NSTimeInterval,
-                       delay: NSTimeInterval = 0,
-                       ease: Ease.TimingFunction = Ease.Quad.easeOut,
+                       time: TimeInterval,
+                       delay: TimeInterval = 0,
+                       ease: @escaping Ease.TimingFunction = Ease.Quad.easeOut,
                        key: String? = nil,
                        onStart: StartClosure? = nil,
                        onComplete: CompletionClosure? = nil,
-                       update: UpdateClosure) {
+                       update: @escaping UpdateClosure) {
     self.from = from
     self.to = to
     self.time = time
@@ -69,7 +69,7 @@ final public class Tween<T: Morphable>: AbstractTweenable, Tweenable, Updatable 
   //MARK: lifecycle
 
   /// Current time offset (seconds)
-  override public var head: NSTimeInterval {
+  override public var head: TimeInterval {
     didSet {
       if oldValue != head {
         update()
@@ -79,15 +79,15 @@ final public class Tween<T: Morphable>: AbstractTweenable, Tweenable, Updatable 
   
   func update() {
     let ratio = ease(
-      t: max(0, head - delay),
-      b: from.initialValue,
-      c: span,
-      d: duration - delay)
+      max(0, head - delay),
+      from.initialValue,
+      span,
+      duration - delay)
     let morphedValue = T.morph(
       from,
       to: to,
       ratio: ratio)
-    onUpdate(value: head != duration ? morphedValue : to)
+    onUpdate(head != duration ? morphedValue : to)
   }
   
   //MARK: reverse
@@ -110,7 +110,7 @@ final public class Tween<T: Morphable>: AbstractTweenable, Tweenable, Updatable 
   //MARK: time
   
   /// Duration (seconds)
-  override public var duration: NSTimeInterval {
+  override public var duration: TimeInterval {
     get {
       return time + delay
     }
@@ -127,7 +127,7 @@ final public class Tween<T: Morphable>: AbstractTweenable, Tweenable, Updatable 
     }
   }
   
-  private var span: Double {
+  fileprivate var span: Double {
     return to.finalValue - from.initialValue
   }
 

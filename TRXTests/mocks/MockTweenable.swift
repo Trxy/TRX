@@ -2,14 +2,14 @@
 
 class MockTweenable: MockSubscriber, Tweenable, Updatable {
  
-  private var _duration: NSTimeInterval?
+  fileprivate var _duration: TimeInterval?
   
-  var duration: NSTimeInterval {
+  var duration: TimeInterval {
     get {
       return (_duration ?? 0) * scale
     }
     set {
-      if let duration = _duration where duration > 0 {
+      if let duration = _duration , duration > 0 {
         scale = newValue / duration
       } else {
         _duration = newValue
@@ -31,18 +31,18 @@ class MockTweenable: MockSubscriber, Tweenable, Updatable {
     }
   }
   
-  private(set) var onStartCalled = 0
-  private(set) var onCompleteCalled = 0
-  private(set) var updateCalled = 0
+  fileprivate(set) var onStartCalled = 0
+  fileprivate(set) var onCompleteCalled = 0
+  fileprivate(set) var updateCalled = 0
   
   var scale: Double = 1
-  var head: NSTimeInterval = 0
+  var head: TimeInterval = 0
   var paused: Bool = true
   var onStart: StartClosure?
   var onComplete: CompletionClosure?
   func start() {}
   func stop() {}
-  func seek(delta: NSTimeInterval) {
+  func seek(_ delta: TimeInterval) {
     head = delta
   }
 }

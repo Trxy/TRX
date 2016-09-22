@@ -23,7 +23,7 @@ class SchedulerSpec: QuickSpec {
       }
       
       afterEach() {
-        displayLink.paused = true
+        displayLink.isPaused = true
       }
       
       describe("when subscribtion added") {
@@ -33,7 +33,7 @@ class SchedulerSpec: QuickSpec {
         }
         
         it("starts the display link") {
-          expect(displayLink.paused) == false
+          expect(displayLink.isPaused) == false
         }
         
       }
@@ -46,7 +46,7 @@ class SchedulerSpec: QuickSpec {
         }
         
         it("pauses the display link") {
-          expect(displayLink.paused) == true
+          expect(displayLink.isPaused) == true
         }
         
       }

@@ -2,20 +2,20 @@
 
 class MockScheduler: Dispatcher {
   
-  private var callCount: NSCountedSet = NSCountedSet()
+  fileprivate var callCount: NSCountedSet = NSCountedSet()
   
-  func callCount(name: String) -> Int {
-    return callCount.countForObject(name)
+  func callCount(_ name: String) -> Int {
+    return callCount.count(for: name)
   }
   
-  func subscribe(subscriber: Subscriber) {
-    callCount.addObject(#function)
+  func subscribe(_ subscriber: Subscriber) {
+    callCount.add(#function)
   }
   
-  func unsubscribe(subscriber: Subscriber) {
-    callCount.addObject(#function)
+  func unsubscribe(_ subscriber: Subscriber) {
+    callCount.add(#function)
   }
   
-  var timeStamp: NSTimeInterval = 0
+  var timeStamp: TimeInterval = 0
   
 }

@@ -1,13 +1,13 @@
 @testable import TRX
 
-typealias TweenableType = protocol<Tweenable, Schedulable, Subscriber>
+typealias TweenableType = Tweenable & Schedulable & Subscriber
 
 class TweenFactory {
   
   typealias FactoryClosure = () -> TweenableType
-  private(set) var getInstance: FactoryClosure
+  fileprivate(set) var getInstance: FactoryClosure
   
-  init(closure: FactoryClosure) {
+  init(closure: @escaping FactoryClosure) {
     self.getInstance = closure
   }
   

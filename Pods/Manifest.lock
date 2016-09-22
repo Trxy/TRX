@@ -1,19 +1,9 @@
 PODS:
-  - FBSnapshotTestCase (2.1.2):
-    - FBSnapshotTestCase/SwiftSupport (= 2.1.2)
-  - FBSnapshotTestCase/Core (2.1.2)
-  - FBSnapshotTestCase/SwiftSupport (2.1.2):
-    - FBSnapshotTestCase/Core
   - Nimble (5.0.0)
-  - Nimble-Snapshots (4.2.0):
-    - FBSnapshotTestCase (~> 2.0)
-    - Nimble
-    - Quick
   - Quick (0.9.3)
 
 DEPENDENCIES:
   - Nimble (~> 5.0)
-  - Nimble-Snapshots
   - Quick (from `https://github.com/Quick/Quick.git`)
 
 EXTERNAL SOURCES:
@@ -26,11 +16,9 @@ CHECKOUT OPTIONS:
     :git: https://github.com/Quick/Quick.git
 
 SPEC CHECKSUMS:
-  FBSnapshotTestCase: 918c55861356ee83aee7843d759f55a18ff6982b
   Nimble: 56fc9f5020effa2206de22c3dd910f4fb011b92f
-  Nimble-Snapshots: 4826e3ee211d2c7af27645e35d68b9e9917882e7
   Quick: 31fb576b6cbb6b028cc5e0016e4366accbb346f5
 
-PODFILE CHECKSUM: bf16e7a3891be983fbc8e85dbc1ea57a65514b83
+PODFILE CHECKSUM: f895b4b214bfa5b541a4bf800887e0cb7f184522
 
 COCOAPODS: 1.0.1

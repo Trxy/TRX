@@ -4,26 +4,26 @@
  Use a Timelines to chain Tweens or even other Timelines.
  
  */
-final public class TimeLine: AbstractTweenable, Tweenable, ArrayLiteralConvertible, DictionaryLiteralConvertible {
+final public class TimeLine: AbstractTweenable, Tweenable, ExpressibleByArrayLiteral, ExpressibleByDictionaryLiteral {
   
   //MARK: nested
   
   public typealias UpdateClosure = () -> ()
   
-  private struct Span {
-    var start: NSTimeInterval
-    var end: NSTimeInterval
+  fileprivate struct Span {
+    var start: TimeInterval
+    var end: TimeInterval
     
-    func contains(time: NSTimeInterval) -> Bool {
+    func contains(_ time: TimeInterval) -> Bool {
       return start <= time && time < end
     }
   }
   
-  private struct TweenContainer {
+  fileprivate struct TweenContainer {
     var tween: Tweenable
     var span: Span
     
-    func scaled(value: Double) -> TweenContainer {
+    func scaled(_ value: Double) -> TweenContainer {
       tween.scale = value
       return TweenContainer(tween: tween,
                             span: Span(start: span.start * value,
@@ -33,7 +33,7 @@ final public class TimeLine: AbstractTweenable, Tweenable, ArrayLiteralConvertib
   
   //MARK: properties
 
-  private var container = [TweenContainer]()
+  fileprivate var container = [TweenContainer]()
   var onUpdate: UpdateClosure?
   
   //MARK: initializers
@@ -88,19 +88,19 @@ final public class TimeLine: AbstractTweenable, Tweenable, ArrayLiteralConvertib
   }
   
   /// Current time offset (seconds)
-  override public var head: NSTimeInterval {
+  override public var head: TimeInterval {
     didSet {
       update(head, prevHead: oldValue)
     }
   }
   
-  private func update(head: NSTimeInterval, prevHead: NSTimeInterval) {
+  private func update(_ head: TimeInterval, prevHead: TimeInterval) {
     
     var deffered: [() -> ()] = []
     container.forEach { data in
       let tweenable = data.tween
       let span = data.span
-      let distance = span.start.distanceTo(head)
+      let distance = span.start.distance(to: head)
       let distanceTo = min(max(0, distance), tweenable.duration)
       if !paused && pointPassed(head, prevDelta: prevHead, point: span.start) {
         tweenable.onStart?()
@@ -113,13 +113,13 @@ final public class TimeLine: AbstractTweenable, Tweenable, ArrayLiteralConvertib
         tweenable.seek(distanceTo)
       }
       if !paused && pointPassed(head, prevDelta: prevHead, point: span.end) {
-        tweenable.onComplete?(done: true)
+        tweenable.onComplete?(true)
       }
     }
     deffered.forEach { $0() }
   }
   
-  private func pointPassed(delta: NSTimeInterval, prevDelta: NSTimeInterval, point: NSTimeInterval) -> Bool {
+  private func pointPassed(_ delta: TimeInterval, prevDelta: TimeInterval, point: TimeInterval) -> Bool {
     return  delta == point || (delta > point && prevDelta < point)
   }
   
@@ -138,13 +138,13 @@ final public class TimeLine: AbstractTweenable, Tweenable, ArrayLiteralConvertib
    - Parameter shift: Delta to previous Tweenable (in seconds); defaults to 0
    
    */
-  public func add(tween: Tweenable, shift: NSTimeInterval = 0.0) {
+  public func add(_ tween: Tweenable, shift: TimeInterval = 0.0) {
     let start = duration + shift
     let end = start + tween.duration
     let data = TweenContainer(tween: tween,
                               span: Span(start: start, end: end))
     if let subscriber = tween as? Subscriber {
-      keys.unionInPlace(subscriber.keys)
+      keys.formUnion(subscriber.keys)
     }
     container.append(data)
   }
@@ -154,16 +154,16 @@ final public class TimeLine: AbstractTweenable, Tweenable, ArrayLiteralConvertib
    
    - Parameter tweens: Array of Tweenables
   */
-  public func add(tweens: [Tweenable]) {
+  public func add(_ tweens: [Tweenable]) {
      tweens.forEach { add($0) }
   }
   
   //MARK: time
   
   /// Duration (seconds)
-  override public var duration: NSTimeInterval {
+  override public var duration: TimeInterval {
     get {
-      return container.map({ $0.span.end }).maxElement() ?? 0
+      return container.map({ $0.span.end }).max() ?? 0
     }
     set {
       scale = newValue / duration

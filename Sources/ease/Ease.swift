@@ -1,5 +1,5 @@
 
 /// A Collection of Easing Functions
 public struct Ease {
-  public typealias TimingFunction = (t: Double, b: Double, c: Double, d: Double) -> Double
+  public typealias TimingFunction = (_ t: Double, _ b: Double, _ c: Double, _ d: Double) -> Double
 }

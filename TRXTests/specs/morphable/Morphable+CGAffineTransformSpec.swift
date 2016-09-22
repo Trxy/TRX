@@ -10,8 +10,8 @@ class Morphable_CGAffineTransform: QuickSpec {
     
     var subject: Tween<CGAffineTransform>!
     var current: CGAffineTransform?
-    let start = CGAffineTransformIdentity
-    let finalValue = CGAffineTransformMakeTranslation(10, 20)
+    let start = CGAffineTransform.identity
+    let finalValue = CGAffineTransform(translationX: 10, y: 20)
     
     beforeEach {
       subject = Tween(from: start,

@@ -1,7 +1,7 @@
 import Foundation
 
-protocol Subscriber: AnyObject {
+protocol Subscriber: class {
   
   var keys: Set<String> { get }
-  func tick(time: NSTimeInterval)
+  func tick(_ time: TimeInterval)
 }

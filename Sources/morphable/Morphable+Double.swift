@@ -10,7 +10,7 @@ extension Double: Morphable {
    Returns the value converted by ratio
    
    */
-  public static func morph(from: Double,
+  public static func morph(_ from: Double,
                            to: Double,
                            ratio: Double) -> Double {
     return ratio

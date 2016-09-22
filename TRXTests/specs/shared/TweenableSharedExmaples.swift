@@ -8,11 +8,11 @@ class TweenableExamples: QuickConfiguration {
   static let durationKey = "expectedDuration"
   static let factoryKey = "factory"
   
-  override class func configure(configuration: Configuration) {
+  override class func configure(_ configuration: Configuration) {
     sharedExamples(key) { (sharedContext: SharedExampleContext) in
       
       let factory = sharedContext()[factoryKey] as! TweenFactory
-      let expectedDuration: NSTimeInterval = sharedContext()[durationKey] as! NSTimeInterval
+      let expectedDuration: TimeInterval = sharedContext()[durationKey] as! TimeInterval
       
       describe("tweenable") {
         
@@ -25,7 +25,7 @@ class TweenableExamples: QuickConfiguration {
         describe("duration") {
           
           it("has correct duration") {
-            expect(subject.duration) ≈ NSNumber(double: expectedDuration)
+            expect(subject.duration) ≈ NSNumber(value: expectedDuration)
           }
           
         }
@@ -45,7 +45,7 @@ class TweenableExamples: QuickConfiguration {
             }
             
             it("has correct scale") {
-              expect(subject.scale) ≈ NSNumber(double: scale)
+              expect(subject.scale) ≈ NSNumber(value: scale)
             }
             
           }
@@ -61,7 +61,7 @@ class TweenableExamples: QuickConfiguration {
             }
             
             it("has correct scale") {
-              expect(subject.scale) ≈ NSNumber(double: scale)
+              expect(subject.scale) ≈ NSNumber(value: scale)
             }
             
           }

@@ -13,14 +13,14 @@ extension Scheduler {
     }
     
     var hashValue: Int {
-      return unsafeAddressOf(subscriber).hashValue
+      return Unmanaged<AnyObject>.passUnretained(subscriber).toOpaque().hashValue
     }
     
     var keys: Set<String> {
       return subscriber.keys
     }
     
-    func tick(timeStamp: NSTimeInterval) {
+    func tick(_ timeStamp: TimeInterval) {
       subscriber.tick(timeStamp)
     }
     

@@ -12,7 +12,7 @@ extension CATransform3D: Morphable {
    Returns the value converted by ratio
    
    */
-  public static func morph(from: CATransform3D,
+  public static func morph(_ from: CATransform3D,
                            to: CATransform3D,
                            ratio: Double) -> CATransform3D {
     return CATransform3D(m11: morpher.tween(from.m11, to: to.m11, ratio: ratio),

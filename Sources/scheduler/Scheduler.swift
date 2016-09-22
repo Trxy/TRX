@@ -13,32 +13,32 @@ final public class Scheduler: Dispatcher {
   lazy var displayLink: CADisplayLink = {
     let link = CADisplayLink(target: self,
                              selector: #selector(Scheduler.update(_:)))
-    link.paused = true
-    link.addToRunLoop(NSRunLoop.currentRunLoop(),
-                      forMode: NSRunLoopCommonModes)
+    link.isPaused = true
+    link.add(to: RunLoop.current,
+                      forMode: RunLoopMode.commonModes)
     return link
   }()
   
-  private var subscribers = Set<Proxy>()
+  fileprivate var subscribers = Set<Proxy>()
   
-  var timeStamp: NSTimeInterval {
+  var timeStamp: TimeInterval {
     return displayLink.timestamp
   }
   
-  private func runIfNeeded() {
-    displayLink.paused = subscribers.count == 0
+  fileprivate func runIfNeeded() {
+    displayLink.isPaused = subscribers.count == 0
   }
   
   //MARK: subscription
   
-  func subscribe(subscriber: Subscriber) {
+  func subscribe(_ subscriber: Subscriber) {
     let subscription = Proxy(subscriber: subscriber)
     solveOverwrite(subscriber)
     subscribers.insert(subscription)
     runIfNeeded()
   }
   
-  func unsubscribe(subscriber: Subscriber) {
+  func unsubscribe(_ subscriber: Subscriber) {
     
     if let proxy = subscribers.filter({
       $0.subscriber === subscriber
@@ -48,7 +48,7 @@ final public class Scheduler: Dispatcher {
     runIfNeeded()
   }
   
-  @objc private func update(link: CADisplayLink) {
+  @objc fileprivate func update(_ link: CADisplayLink) {
     subscribers.forEach { proxy in
       proxy.tick(link.timestamp)
     }
@@ -56,18 +56,18 @@ final public class Scheduler: Dispatcher {
   
   //MARK: overwrite
   
-  private func solveOverwrite(subscriber: Subscriber) {
+  fileprivate func solveOverwrite(_ subscriber: Subscriber) {
     if subscriber.keys.count > 0 {
       pauseAll(subscribersWithKeys(subscriber.keys))
     }
   }
   
-  private func subscribersWithKeys(keys: Set<String>) -> [Proxy] {
+  fileprivate func subscribersWithKeys(_ keys: Set<String>) -> [Proxy] {
     
-    return subscribers.filter { $0.keys.intersect(keys).count > 0 }
+    return subscribers.filter { $0.keys.intersection(keys).count > 0 }
   }
   
-  private func pauseAll(subscribers: [Proxy]) {
+  fileprivate func pauseAll(_ subscribers: [Proxy]) {
     subscribers.forEach { ($0.subscriber as? Tweenable)?.paused = true }
   }
   

@@ -4,18 +4,18 @@
  
  */
 public typealias StartClosure = () -> ()
-public typealias CompletionClosure = (done: Bool) -> ()
+public typealias CompletionClosure = (_ done: Bool) -> ()
 
 public protocol Tweenable: class {
   
   /// Duration (seconds)
-  var duration: NSTimeInterval { get set }
+  var duration: TimeInterval { get set }
   
   /// Scale. Defaults to 1.0
   var scale: Double { get set }
   
   /// Current time offset (seconds)
-  var head: NSTimeInterval { get }
+  var head: TimeInterval { get }
   
   /// Pause or resume animation
   var paused: Bool { get set }
@@ -37,7 +37,7 @@ public protocol Tweenable: class {
    
    - Parameter delta: Time offset (seconds)
    */
-  func seek(delta: NSTimeInterval)
+  func seek(_ delta: TimeInterval)
   
 }
 

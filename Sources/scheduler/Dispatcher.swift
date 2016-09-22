@@ -1,6 +1,6 @@
 protocol Dispatcher {
   
-  func subscribe(subscriber: Subscriber)
-  func unsubscribe(subscriber: Subscriber)
-  var timeStamp: NSTimeInterval { get }
+  func subscribe(_ subscriber: Subscriber)
+  func unsubscribe(_ subscriber: Subscriber)
+  var timeStamp: TimeInterval { get }
 }

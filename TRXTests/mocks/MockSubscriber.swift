@@ -2,16 +2,16 @@
 
 class MockSubscriber: Subscriber {
   
-  private var callCount: NSCountedSet = NSCountedSet()
+  fileprivate var callCount: NSCountedSet = NSCountedSet()
   
-  func callCount(name: String) -> Int {
-    return callCount.countForObject(name)
+  func callCount(_ name: String) -> Int {
+    return callCount.count(for: name)
   }
   
   var keys: Set<String> = []
   
-  func tick(time: NSTimeInterval) {
-    callCount.addObject(#function)
+  func tick(_ time: TimeInterval) {
+    callCount.add(#function)
   }
   
 }

@@ -126,11 +126,11 @@ myView.trxFrameTo(someFrame)
 ## Requirements
 
 ```
-iOS: 8.4, tvOS: 9.0, Xcode 8, Swift 2.3
-
-Check out swift-3.0 branch for latest swift version compatibility
-
+iOS: 8.4, tvOS: 9.0, Xcode 8, Swift 3.0
 ```
+
+For swift 2.3 compatible version check out TRX 4.x
+
 ## Installation
 ### Cocoa Pods
 ```

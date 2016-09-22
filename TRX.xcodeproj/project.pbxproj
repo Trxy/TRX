@@ -48,7 +48,6 @@
 		66E5EC721D461C3C00C2B1DA /* Sin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E5EC581D461C3C00C2B1DA /* Sin.swift */; };
 		66E5EC731D461CD500C2B1DA /* TRX.h in Headers */ = {isa = PBXBuildFile; fileRef = 667AEFAC1D4606B9004E291C /* TRX.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		66E5EC741D461D3200C2B1DA /* TRX.h in Headers */ = {isa = PBXBuildFile; fileRef = 667AEFAC1D4606B9004E291C /* TRX.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		66E5ECA51D461DCA00C2B1DA /* EasingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E5EC781D461DCA00C2B1DA /* EasingSpec.swift */; };
 		66E5ECA61D461DCA00C2B1DA /* Morphable+CGPointSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E5EC7A1D461DCA00C2B1DA /* Morphable+CGPointSpec.swift */; };
 		66E5ECA71D461DCA00C2B1DA /* Morphable+CGRectSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E5EC7B1D461DCA00C2B1DA /* Morphable+CGRectSpec.swift */; };
 		66E5ECA81D461DCA00C2B1DA /* Morphable+CGSizeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E5EC7C1D461DCA00C2B1DA /* Morphable+CGSizeSpec.swift */; };
@@ -142,7 +141,6 @@
 		66E5EC561D461C3C00C2B1DA /* Quad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quad.swift; sourceTree = "<group>"; };
 		66E5EC571D461C3C00C2B1DA /* Quart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quart.swift; sourceTree = "<group>"; };
 		66E5EC581D461C3C00C2B1DA /* Sin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sin.swift; sourceTree = "<group>"; };
-		66E5EC781D461DCA00C2B1DA /* EasingSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = EasingSpec.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		66E5EC7A1D461DCA00C2B1DA /* Morphable+CGPointSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "Morphable+CGPointSpec.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		66E5EC7B1D461DCA00C2B1DA /* Morphable+CGRectSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "Morphable+CGRectSpec.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		66E5EC7C1D461DCA00C2B1DA /* Morphable+CGSizeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "Morphable+CGSizeSpec.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -342,7 +340,6 @@
 		66E5EC761D461DCA00C2B1DA /* specs */ = {
 			isa = PBXGroup;
 			children = (
-				66E5EC771D461DCA00C2B1DA /* easing */,
 				66E5EC791D461DCA00C2B1DA /* morphable */,
 				66E5EC7D1D461DCA00C2B1DA /* scheduler */,
 				66E5EC7F1D461DCA00C2B1DA /* shared */,
@@ -350,14 +347,6 @@
 				66E5EC831D461DCA00C2B1DA /* tween */,
 			);
 			path = specs;
-			sourceTree = "<group>";
-		};
-		66E5EC771D461DCA00C2B1DA /* easing */ = {
-			isa = PBXGroup;
-			children = (
-				66E5EC781D461DCA00C2B1DA /* EasingSpec.swift */,
-			);
-			path = easing;
 			sourceTree = "<group>";
 		};
 		66E5EC791D461DCA00C2B1DA /* morphable */ = {
@@ -726,7 +715,6 @@
 				66E5ECA61D461DCA00C2B1DA /* Morphable+CGPointSpec.swift in Sources */,
 				669DCE2E1D6B240B0005CB15 /* Morphable+CGAffineTransformSpec.swift in Sources */,
 				66E5ECA81D461DCA00C2B1DA /* Morphable+CGSizeSpec.swift in Sources */,
-				66E5ECA51D461DCA00C2B1DA /* EasingSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -795,7 +783,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -848,7 +836,7 @@
 				PRODUCT_NAME = TRX;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -909,7 +897,7 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -962,7 +950,7 @@
 				PRODUCT_NAME = TRX;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALIDATE_PRODUCT = YES;
@@ -1019,7 +1007,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1063,7 +1051,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.trx.TRXTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
