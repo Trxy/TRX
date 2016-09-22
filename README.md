@@ -127,6 +127,9 @@ myView.trxFrameTo(someFrame)
 
 ```
 iOS: 8.4, tvOS: 9.0, Xcode 8, Swift 2.3
+
+Check out swift-3.0 branch for latest swift version compatibility
+
 ```
 ## Installation
 ### Cocoa Pods
