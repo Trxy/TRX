@@ -35,6 +35,15 @@ class TableOfContentsSpec: QuickSpec {
 #### Nimble
 Quick comes together with [Nimble](https://github.com/Quick/Nimble) — a matcher framework for your tests. You can learn why `XCTAssert()` statements make your expectations unclear and how to fix that using Nimble assertions [here](./Documentation/en-us/NimbleAssertions.md).
 
+## Swift Version
+
+Certain versions of Quick and Nimble only support certain versions of Swift. Depending on which version of Swift your project uses, you should use specific versions of Quick and Nimble. Use the table below to determine which versions of Quick and Nimble are compatible with your project.
+
+|Swift version        |Quick version   |Nimble version |
+|:--------------------|:---------------|:--------------|
+|Swift 3              |v0.10.0 or later|v5.0.0 or later|
+|Swift 2.2 / Swift 2.3|v0.9.3          |v4.1.0         |
+
 ## Documentation
 
 All documentation can be found in the [Documentation folder](./Documentation), including [detailed installation instructions](./Documentation/en-us/InstallingQuick.md) for CocoaPods, Carthage, Git submodules, and more. For example, you can install Quick and [Nimble](https://github.com/Quick/Nimble) using CocoaPods by adding the following to your Podfile:
