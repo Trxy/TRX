@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		10498C2EB1DCF41C279F4C1F /* Pods_TRXTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64AEF7597538DD831930176 /* Pods_TRXTests.framework */; };
+		660404261DA2A68100A1CE66 /* EasingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660404251DA2A68100A1CE66 /* EasingSpec.swift */; };
 		6650F1AC1D9174690071F5F0 /* FloatMorpher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66728B5C1D6B2A3A00F827CF /* FloatMorpher.swift */; };
 		66728B5D1D6B2A3A00F827CF /* FloatMorpher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66728B5C1D6B2A3A00F827CF /* FloatMorpher.swift */; };
 		667AEFD81D460A7D004E291C /* TRX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 663E81411D45FC6F00130EB5 /* TRX.framework */; };
@@ -101,6 +102,7 @@
 /* Begin PBXFileReference section */
 		35D73B81CBB1F61CC6AB06ED /* Pods-TRXTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRXTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TRXTests/Pods-TRXTests.release.xcconfig"; sourceTree = "<group>"; };
 		4FDB8A670D5D07A4F7D81EBC /* Pods-TRXTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRXTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TRXTests/Pods-TRXTests.debug.xcconfig"; sourceTree = "<group>"; };
+		660404251DA2A68100A1CE66 /* EasingSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasingSpec.swift; sourceTree = "<group>"; };
 		663E81411D45FC6F00130EB5 /* TRX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TRX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		663E814B1D45FD5B00130EB5 /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
 		66728B5C1D6B2A3A00F827CF /* FloatMorpher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatMorpher.swift; sourceTree = "<group>"; };
@@ -190,6 +192,14 @@
 				35D73B81CBB1F61CC6AB06ED /* Pods-TRXTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		660404241DA2A68100A1CE66 /* easing */ = {
+			isa = PBXGroup;
+			children = (
+				660404251DA2A68100A1CE66 /* EasingSpec.swift */,
+			);
+			path = easing;
 			sourceTree = "<group>";
 		};
 		663E81421D45FC6F00130EB5 /* Products */ = {
@@ -340,6 +350,7 @@
 		66E5EC761D461DCA00C2B1DA /* specs */ = {
 			isa = PBXGroup;
 			children = (
+				660404241DA2A68100A1CE66 /* easing */,
 				66E5EC791D461DCA00C2B1DA /* morphable */,
 				66E5EC7D1D461DCA00C2B1DA /* scheduler */,
 				66E5EC7F1D461DCA00C2B1DA /* shared */,
@@ -713,6 +724,7 @@
 				66E5ECAB1D461DCA00C2B1DA /* TimeLineSpec.swift in Sources */,
 				66E5ECC71D461DCA00C2B1DA /* TweenFactory.swift in Sources */,
 				66E5ECA61D461DCA00C2B1DA /* Morphable+CGPointSpec.swift in Sources */,
+				660404261DA2A68100A1CE66 /* EasingSpec.swift in Sources */,
 				669DCE2E1D6B240B0005CB15 /* Morphable+CGAffineTransformSpec.swift in Sources */,
 				66E5ECA81D461DCA00C2B1DA /* Morphable+CGSizeSpec.swift in Sources */,
 			);
