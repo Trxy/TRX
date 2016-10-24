@@ -117,6 +117,7 @@
 		6699A1971D51FE3400F530F6 /* Morphable+CATransform3D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Morphable+CATransform3D.swift"; sourceTree = "<group>"; };
 		669DCE2D1D6B240B0005CB15 /* Morphable+CGAffineTransformSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Morphable+CGAffineTransformSpec.swift"; sourceTree = "<group>"; };
 		669DCE2F1D6B24290005CB15 /* Morphable+CATransform3DSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Morphable+CATransform3DSpec.swift"; sourceTree = "<group>"; };
+		66DB23EB1DBE4A260093096B /* Readme.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Readme.playground; sourceTree = "<group>"; };
 		66E5EC391D461C3C00C2B1DA /* Tween.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tween.swift; sourceTree = "<group>"; };
 		66E5EC3B1D461C3C00C2B1DA /* TimeLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLine.swift; sourceTree = "<group>"; };
 		66E5EC3D1D461C3C00C2B1DA /* Tween+Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tween+Double.swift"; sourceTree = "<group>"; };
@@ -242,6 +243,7 @@
 		66D55E8D1D45FA7400A4DA1C = {
 			isa = PBXGroup;
 			children = (
+				66DB23EB1DBE4A260093096B /* Readme.playground */,
 				663E814A1D45FCBD00130EB5 /* Sources */,
 				667AEFD41D460A7D004E291C /* TRXTests */,
 				663E81421D45FC6F00130EB5 /* Products */,
