@@ -25,9 +25,9 @@ class TimeLineSpec: QuickSpec {
       
       let factory: TweenFactory.FactoryClosure = {
         let timeline = TimeLine()
-        timeline.add(tweenA, shift: 0.1)
-        timeline.add(tweenB, shift: 0.2)
-        timeline.add(tweenC, shift: -0.6)
+        timeline.add(tween: tweenA, shift: 0.1)
+        timeline.add(tween: tweenB, shift: 0.2)
+        timeline.add(tween: tweenC, shift: -0.6)
         return timeline
       }
       
@@ -70,9 +70,9 @@ class TimeLineSpec: QuickSpec {
       describe("when single tweens added") {
         
         beforeEach() {
-          subject.add(tweenA)
-          subject.add(tweenB)
-          subject.add(tweenC)
+          subject.add(tween: tweenA)
+          subject.add(tween: tweenB)
+          subject.add(tween: tweenC)
         }
         
         it("should contain tweens") {
@@ -84,7 +84,7 @@ class TimeLineSpec: QuickSpec {
       describe("when array of tweens added") {
         
         beforeEach() {
-          subject.add([tweenA, tweenB, tweenC])
+          subject.add(tweens: [tweenA, tweenB, tweenC])
         }
         
         it("should contain tweens") {
@@ -103,33 +103,33 @@ class TimeLineSpec: QuickSpec {
         
         mockScheduler = MockScheduler()
         subject.scheduler = mockScheduler
-        subject.add([tweenA, tweenB])
+        subject.add(tweens: [tweenA, tweenB])
         subject.start()
       }
       
       it("calls start A") {
-        subject.tick(1)
-        subject.tick(1.1)
+        subject.tick(time: 1)
+        subject.tick(time: 1.1)
         expect(tweenA.onStartCalled) == 1
       }
       
       it("calls completion A") {
-        subject.tick(1)
-        subject.tick(1.5)
-        subject.tick(2.1)
+        subject.tick(time: 1)
+        subject.tick(time: 1.5)
+        subject.tick(time: 2.1)
         expect(tweenA.onCompleteCalled) == 1
       }
       
       it("calls Start B") {
-        subject.tick(1)
-        subject.tick(2.1)
+        subject.tick(time: 1)
+        subject.tick(time: 2.1)
         expect(tweenB.onStartCalled) == 1
       }
       
       it("calls completion B") {
-        subject.tick(1)
-        subject.tick(2.1)
-        subject.tick(4.1)
+        subject.tick(time: 1)
+        subject.tick(time: 2.1)
+        subject.tick(time: 4.1)
         expect(tweenB.onCompleteCalled) == 1
       }
       
@@ -150,7 +150,7 @@ class TimeLineSpec: QuickSpec {
         context("on start") {
           
           beforeEach() {
-            subject.seek(0.1)
+            subject.seek(offset: 0.1)
           }
           
           it("sets head A with correct value") {
@@ -170,7 +170,7 @@ class TimeLineSpec: QuickSpec {
         context("on B") {
           
           beforeEach() {
-            subject.seek(1.3)
+            subject.seek(offset: 1.3)
           }
           
           it("sets head A with correct value") {
@@ -190,7 +190,7 @@ class TimeLineSpec: QuickSpec {
         context("on C") {
           
           beforeEach() {
-            subject.seek(3.3)
+            subject.seek(offset: 3.3)
           }
           
           it("sets head A with correct value") {
@@ -211,7 +211,7 @@ class TimeLineSpec: QuickSpec {
         context("on end") {
           
           beforeEach() {
-            subject.seek(4.8)
+            subject.seek(offset: 4.8)
           }
           
           it("sets head A with correct value") {

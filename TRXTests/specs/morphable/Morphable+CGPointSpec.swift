@@ -26,7 +26,7 @@ class Morphable_CGPointSpec: QuickSpec {
       context("beginning") {
         
         beforeEach() {
-          subject.seek(0)
+          subject.seek(offset: 0)
         }
         
         it("should have correct value") {
@@ -38,7 +38,7 @@ class Morphable_CGPointSpec: QuickSpec {
       context("end") {
         
         beforeEach() {
-          subject.seek(1)
+          subject.seek(offset: 1)
         }
         
         it("should have correct value") {
@@ -50,7 +50,7 @@ class Morphable_CGPointSpec: QuickSpec {
       context("between") {
         
         beforeEach() {
-          subject.seek(0.5)
+          subject.seek(offset: 0.5)
         }
         
         it("should have correct value") {

@@ -11,7 +11,7 @@ public protocol Morphable {
    Returns the value converted by ratio
    
    */
-  static func morph(_ from: Self, to: Self, ratio: Double) -> Self
+  static func morph(from: Self, to: Self, ratio: Double) -> Self
   
   /// Initial ratio value (usually 0.0 or self if Double convertible)
   var initialValue: Double { get }

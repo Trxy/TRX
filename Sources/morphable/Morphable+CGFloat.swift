@@ -12,7 +12,7 @@ extension CGFloat: Morphable {
    Returns the value converted by ratio
    
    */
-  public static func morph(_ from: CGFloat,
+  public static func morph(from: CGFloat,
                            to: CGFloat,
                            ratio: Double) -> CGFloat {
     return CGFloat(ratio)

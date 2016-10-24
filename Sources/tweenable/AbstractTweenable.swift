@@ -57,12 +57,12 @@ open class AbstractTweenable: Subscriber, Schedulable {
    
    - Parameter delta: Time offset (seconds)
    */
-  final public func seek(_ delta: TimeInterval) {
+  final public func seek(offset delta: TimeInterval) {
     head = min(max(delta, 0), duration)
   }
   
   var scheduler: Dispatcher = Scheduler.shared
-  fileprivate var startTime: TimeInterval = 0
+  private var startTime: TimeInterval = 0
   
   /// Start the animation
   final public func start() {
@@ -74,7 +74,7 @@ open class AbstractTweenable: Subscriber, Schedulable {
     paused = true
   }
   
-  final func tick(_ time: TimeInterval) {
+  final func tick(time: TimeInterval) {
     if startTime == 0 {
       startTime = time
     }

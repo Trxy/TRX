@@ -34,17 +34,17 @@ class TweenSpec: QuickSpec {
     describe("seek") {
       
       it("should return correct value on start") {
-        subject.seek(0)
+        subject.seek(offset: 0)
         expect(currentValue) == 1
       }
       
       it("should return correct value in between") {
-        subject.seek(1)
+        subject.seek(offset: 1)
         expect(currentValue) == 2.5
       }
       
       it("should return correct value on completion") {
-        subject.seek(2)
+        subject.seek(offset: 2)
         expect(currentValue) == 4.0
       }
       
@@ -71,22 +71,22 @@ class TweenSpec: QuickSpec {
       context("seek") {
         
         it("should return correct value on start") {
-          subject.seek(0)
+          subject.seek(offset: 0)
           expect(currentValue) == 1
         }
         
         it("should return correct value after delay") {
-          subject.seek(0.5)
+          subject.seek(offset: 0.5)
           expect(currentValue) == 1
         }
         
         it("should return correct value in between") {
-          subject.seek(1.5)
+          subject.seek(offset: 1.5)
           expect(currentValue) == 2.5
         }
         
         it("should return correct value on complition") {
-          subject.seek(2.5)
+          subject.seek(offset: 2.5)
           expect(currentValue) == 4.0
         }
         
@@ -107,17 +107,17 @@ class TweenSpec: QuickSpec {
       context("seek") {
         
         it("should return correct value on start") {
-          subject.seek(0)
+          subject.seek(offset: 0)
           expect(currentValue) == 4
         }
         
         it("should return correct value in between") {
-          subject.seek(1)
+          subject.seek(offset: 1)
           expect(currentValue) == 2.5
         }
         
         it("should return correct value on completion") {
-          subject.seek(2)
+          subject.seek(offset: 2)
           expect(currentValue) == 1
         }
         
@@ -138,22 +138,22 @@ class TweenSpec: QuickSpec {
       context("seek") {
         
         it("should return correct value on start") {
-          subject.seek(0)
+          subject.seek(offset: 0)
           expect(currentValue) == 1
         }
         
         it("should return correct value after delay") {
-          subject.seek(2)
+          subject.seek(offset: 2)
           expect(currentValue) == 1
         }
         
         it("should return correct value in between") {
-          subject.seek(4)
+          subject.seek(offset: 4)
           expect(currentValue) == 2.5
         }
         
         it("should return correct value on completion") {
-          subject.seek(6)
+          subject.seek(offset: 6)
           expect(currentValue) == 4.0
         }
         

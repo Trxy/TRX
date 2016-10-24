@@ -20,8 +20,8 @@ extension Scheduler {
       return subscriber.keys
     }
     
-    func tick(_ timeStamp: TimeInterval) {
-      subscriber.tick(timeStamp)
+    func tick(time timeStamp: TimeInterval) {
+      subscriber.tick(time: timeStamp)
     }
     
   }

@@ -35,9 +35,9 @@ public protocol Tweenable: class {
   /**
    Move head to a specific time offset
    
-   - Parameter delta: Time offset (seconds)
+   - Parameter offset: Time offset (seconds)
    */
-  func seek(_ delta: TimeInterval)
+  func seek(offset: TimeInterval)
   
 }
 

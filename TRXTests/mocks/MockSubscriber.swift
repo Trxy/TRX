@@ -10,7 +10,7 @@ class MockSubscriber: Subscriber {
   
   var keys: Set<String> = []
   
-  func tick(_ time: TimeInterval) {
+  func tick(time: TimeInterval) {
     callCount.add(#function)
   }
   

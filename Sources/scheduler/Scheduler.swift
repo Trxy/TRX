@@ -5,7 +5,7 @@ import QuartzCore
  Dispatches time events to subscribers
  
  */
-final public class Scheduler: Dispatcher {
+final class Scheduler: Dispatcher {
   
   /// Shared singleton
   public static let shared = Scheduler()
@@ -19,13 +19,13 @@ final public class Scheduler: Dispatcher {
     return link
   }()
   
-  fileprivate var subscribers = Set<Proxy>()
+  private var subscribers = Set<Proxy>()
   
   var timeStamp: TimeInterval {
     return displayLink.timestamp
   }
   
-  fileprivate func runIfNeeded() {
+  private func runIfNeeded() {
     displayLink.isPaused = subscribers.count == 0
   }
   
@@ -33,7 +33,7 @@ final public class Scheduler: Dispatcher {
   
   func subscribe(_ subscriber: Subscriber) {
     let subscription = Proxy(subscriber: subscriber)
-    solveOverwrite(subscriber)
+    solveOverwrite(with: subscriber)
     subscribers.insert(subscription)
     runIfNeeded()
   }
@@ -48,26 +48,26 @@ final public class Scheduler: Dispatcher {
     runIfNeeded()
   }
   
-  @objc fileprivate func update(_ link: CADisplayLink) {
+  @objc private func update(_ link: CADisplayLink) {
     subscribers.forEach { proxy in
-      proxy.tick(link.timestamp)
+      proxy.tick(time: link.timestamp)
     }
   }
   
   //MARK: overwrite
   
-  fileprivate func solveOverwrite(_ subscriber: Subscriber) {
+  private func solveOverwrite(with subscriber: Subscriber) {
     if subscriber.keys.count > 0 {
-      pauseAll(subscribersWithKeys(subscriber.keys))
+      pauseAll(subscribers: subscribers(keys: subscriber.keys))
     }
   }
   
-  fileprivate func subscribersWithKeys(_ keys: Set<String>) -> [Proxy] {
+  private func subscribers(keys: Set<String>) -> [Proxy] {
     
     return subscribers.filter { $0.keys.intersection(keys).count > 0 }
   }
   
-  fileprivate func pauseAll(_ subscribers: [Proxy]) {
+  private func pauseAll(subscribers: [Proxy]) {
     subscribers.forEach { ($0.subscriber as? Tweenable)?.paused = true }
   }
   

@@ -42,7 +42,7 @@ class MockTweenable: MockSubscriber, Tweenable, Updatable {
   var onComplete: CompletionClosure?
   func start() {}
   func stop() {}
-  func seek(_ delta: TimeInterval) {
-    head = delta
+  func seek(offset: TimeInterval) {
+    head = offset
   }
 }

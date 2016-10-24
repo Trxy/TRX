@@ -71,7 +71,7 @@ class TweenableExamples: QuickConfiguration {
         describe("seek") {
           
           it("adjusts head") {
-            subject.seek(expectedDuration * 0.5)
+            subject.seek(offset: expectedDuration * 0.5)
             expect(subject.head) == expectedDuration * 0.5
           }
           
@@ -104,8 +104,8 @@ class TweenableExamples: QuickConfiguration {
             context("seeking to beginning") {
               
               beforeEach() {
-                subject.seek(subject.duration / 2)
-                subject.seek(0)
+                subject.seek(offset: subject.duration / 2)
+                subject.seek(offset: 0)
               }
               
               it("shouldn't trigger callback") {
@@ -117,8 +117,8 @@ class TweenableExamples: QuickConfiguration {
             context("seeking to end") {
               
               beforeEach() {
-                subject.seek(subject.duration / 2)
-                subject.seek(subject.duration)
+                subject.seek(offset: subject.duration / 2)
+                subject.seek(offset: subject.duration)
               }
               
               it("shouldn't trigger callback") {
@@ -176,8 +176,8 @@ class TweenableExamples: QuickConfiguration {
               
               beforeEach() {
                 subject.start()
-                subject.tick(1.0)
-                subject.tick(expectedDuration + 1.0)
+                subject.tick(time: 1.0)
+                subject.tick(time: expectedDuration + 1.0)
               }
               
               it("unsubscribes") {

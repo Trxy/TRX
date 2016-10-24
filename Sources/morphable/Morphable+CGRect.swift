@@ -12,11 +12,11 @@ extension CGRect: Morphable {
    Returns the value converted by ratio
    
    */
-  public static func morph(_ from: CGRect,
+  public static func morph(from: CGRect,
                            to: CGRect,
                            ratio: Double) -> CGRect {
-    return CGRect(origin: CGPoint.morph(from.origin, to: to.origin, ratio: ratio),
-                  size: CGSize.morph(from.size, to: to.size, ratio: ratio))
+    return CGRect(origin: CGPoint.morph(from: from.origin, to: to.origin, ratio: ratio),
+                  size: CGSize.morph(from: from.size, to: to.size, ratio: ratio))
   }
   
   /// Initial normalized value (usually 0.0 or self if Double convertible)

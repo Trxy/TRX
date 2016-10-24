@@ -10,30 +10,30 @@ final public class TimeLine: AbstractTweenable, Tweenable, ExpressibleByArrayLit
   
   public typealias UpdateClosure = () -> ()
   
-  fileprivate struct Span {
+  private struct Span {
     var start: TimeInterval
     var end: TimeInterval
     
-    func contains(_ time: TimeInterval) -> Bool {
+    func contains(time: TimeInterval) -> Bool {
       return start <= time && time < end
     }
   }
   
-  fileprivate struct TweenContainer {
+  private struct TweenContainer {
     var tween: Tweenable
     var span: Span
     
-    func scaled(_ value: Double) -> TweenContainer {
-      tween.scale = value
+    func scaled(by: Double) -> TweenContainer {
+      tween.scale = by
       return TweenContainer(tween: tween,
-                            span: Span(start: span.start * value,
-                                       end: span.end * value))
+                            span: Span(start: span.start * by,
+                                       end: span.end * by))
     }
   }
   
   //MARK: properties
 
-  fileprivate var container = [TweenContainer]()
+  private var container = [TweenContainer]()
   var onUpdate: UpdateClosure?
   
   //MARK: initializers
@@ -47,7 +47,7 @@ final public class TimeLine: AbstractTweenable, Tweenable, ExpressibleByArrayLit
    */
   public init(tweens: [Tweenable]) {
     super.init()
-    tweens.forEach { add($0) }
+    tweens.forEach { add(tween: $0) }
     moveToStart();
   }
   
@@ -76,25 +76,25 @@ final public class TimeLine: AbstractTweenable, Tweenable, ExpressibleByArrayLit
    */
   public init(dictionaryLiteral elements: (Tweenable, Double)...) {
     super.init()
-    elements.forEach { add($0.0, shift: $0.1) }
+    elements.forEach { add(tween: $0.0, shift: $0.1) }
     self.moveToStart();
   }
   
   //MARK: lifecycle
   
   private func moveToStart() {
-    container.filter { return $0.span.contains(0) }
+    container.filter { return $0.span.contains(time: 0) }
     .forEach { ($0.tween as? Updatable)?.update() }
   }
   
   /// Current time offset (seconds)
   override public var head: TimeInterval {
     didSet {
-      update(head, prevHead: oldValue)
+      update(head: head, prevHead: oldValue)
     }
   }
   
-  private func update(_ head: TimeInterval, prevHead: TimeInterval) {
+  private func update(head: TimeInterval, prevHead: TimeInterval) {
     
     var deffered: [() -> ()] = []
     container.forEach { data in
@@ -102,24 +102,24 @@ final public class TimeLine: AbstractTweenable, Tweenable, ExpressibleByArrayLit
       let span = data.span
       let distance = span.start.distance(to: head)
       let distanceTo = min(max(0, distance), tweenable.duration)
-      if !paused && pointPassed(head, prevDelta: prevHead, point: span.start) {
+      if !paused && pointPassed(delta: head, prevDelta: prevHead, point: span.start) {
         tweenable.onStart?()
       }
       if distanceTo == distance {
         deffered.append({
-          tweenable.seek(distanceTo)
+          tweenable.seek(offset: distanceTo)
         })
       } else {
-        tweenable.seek(distanceTo)
+        tweenable.seek(offset: distanceTo)
       }
-      if !paused && pointPassed(head, prevDelta: prevHead, point: span.end) {
+      if !paused && pointPassed(delta: head, prevDelta: prevHead, point: span.end) {
         tweenable.onComplete?(true)
       }
     }
     deffered.forEach { $0() }
   }
   
-  private func pointPassed(_ delta: TimeInterval, prevDelta: TimeInterval, point: TimeInterval) -> Bool {
+  private func pointPassed(delta: TimeInterval, prevDelta: TimeInterval, point: TimeInterval) -> Bool {
     return  delta == point || (delta > point && prevDelta < point)
   }
   
@@ -138,7 +138,7 @@ final public class TimeLine: AbstractTweenable, Tweenable, ExpressibleByArrayLit
    - Parameter shift: Delta to previous Tweenable (in seconds); defaults to 0
    
    */
-  public func add(_ tween: Tweenable, shift: TimeInterval = 0.0) {
+  public func add(tween: Tweenable, shift: TimeInterval = 0.0) {
     let start = duration + shift
     let end = start + tween.duration
     let data = TweenContainer(tween: tween,
@@ -154,8 +154,8 @@ final public class TimeLine: AbstractTweenable, Tweenable, ExpressibleByArrayLit
    
    - Parameter tweens: Array of Tweenables
   */
-  public func add(_ tweens: [Tweenable]) {
-     tweens.forEach { add($0) }
+  public func add(tweens: [Tweenable]) {
+    tweens.forEach { add(tween: $0) }
   }
   
   //MARK: time
@@ -173,7 +173,7 @@ final public class TimeLine: AbstractTweenable, Tweenable, ExpressibleByArrayLit
   /// Scale. Defaults to 1.0
   public var scale: Double = 1.0 {
     didSet {
-      container = container.map { $0.scaled(scale) }
+      container = container.map { $0.scaled(by: scale) }
     }
   }
   

@@ -12,11 +12,11 @@ extension CGPoint: Morphable {
    Returns the value converted by ratio
    
    */
-  public static func morph(_ from: CGPoint,
+  public static func morph(from: CGPoint,
                            to: CGPoint,
                            ratio: Double) -> CGPoint {
-    return CGPoint(x: morpher.tween(from.x, to: to.x, ratio: ratio),
-                   y: morpher.tween(from.y, to: to.y, ratio: ratio))
+    return CGPoint(x: morpher.tween(from: from.x, to: to.x, ratio: ratio),
+                   y: morpher.tween(from: from.y, to: to.y, ratio: ratio))
   }
   
   

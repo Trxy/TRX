@@ -19,10 +19,10 @@ final public class Tween<T: Morphable>: AbstractTweenable, Tweenable, Updatable 
   public let ease: Ease.TimingFunction
   
   /// Duration (seconds)
-  fileprivate(set) public var time: TimeInterval
+  private(set) public var time: TimeInterval
   
   /// Time offset (seconds)
-  fileprivate(set) public var delay: TimeInterval
+  private(set) public var delay: TimeInterval
 
   //MARK: callbacks
   
@@ -84,7 +84,7 @@ final public class Tween<T: Morphable>: AbstractTweenable, Tweenable, Updatable 
       span,
       duration - delay)
     let morphedValue = T.morph(
-      from,
+      from: from,
       to: to,
       ratio: ratio)
     onUpdate(head != duration ? morphedValue : to)
@@ -127,7 +127,7 @@ final public class Tween<T: Morphable>: AbstractTweenable, Tweenable, Updatable 
     }
   }
   
-  fileprivate var span: Double {
+  private var span: Double {
     return to.finalValue - from.initialValue
   }
 
