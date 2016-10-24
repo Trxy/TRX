@@ -32,14 +32,14 @@ Tween(from: 0, to: 20, time: 0.3) {
 or neater...
 
 ```swift
-1.trxTo(20) { object.value = $0 }.start()
+1.trx(to: 20) { object.value = $0 }.start()
 ```
 
 Tween `Double`, `CGFloat`, `CGPoint`, `CGSize`, `CGRect`, `CGAffineTransform`, `CATransform3D` 
 or even your own type (by extending the Morphable Protocol)
 
 ```swift
-Tween(from: CGPointZero, to: CGPoint(x: 20, y: 15), time: 0.3) {
+Tween(from: CGPoint.zero, to: CGPoint(x: 20, y: 15), time: 0.3) {
   layer.position = $0
 }.start()
 ```
@@ -55,7 +55,7 @@ Tween(from: 0,
       key: "MyOwnKey",
       onStart: { print("start") },
       onComplete: { done in print("complete and done: \(done)") }) { value in
-    object.value = value
+        object.value = value
 }.start()
 ```
 
@@ -76,20 +76,20 @@ Use a Timeline to chain Tweens or even other timelines
 
 ```swift
 TimeLine(tweens: [
-  1.trxTo(20) { object.value = $0 },
-  30.trxTo(40) { object.value = $0 },
-  40.trxTo(50) { object.value = $0 },
-  ]).start()
+  1.trx(to: 20) { object.value = $0 },
+  30.trx(to: 40) { object.value = $0 },
+  40.trx(to: 50) { object.value = $0 },
+]).start()
 ```
 ![Timeline](https://trxy.github.io/TRX/docs/timeline.png)
 
-Add tweens with overlap
+Add tweens with an overlap
 
 ```swift
 let timeline: TimeLine = [
-  1.trxTo(20) { object.value = $0 }): 0,
-  30.trxTo(40) { anOtherObject.value = $0 }: -0.5,
-  40.trxTo(50) { anOtherObject.value = $0 }: -0.5
+  1.trx(to: 20) { object.value = $0 }: 0,
+  30.trx(to: 40) { anOtherObject.value = $0 }: -0.5,
+  40.trx(to: 50) { anOtherObject.value = $0 }: -0.5
 ]
 timeline.start()
 ```
@@ -98,7 +98,9 @@ timeline.start()
 ### Squeeze and stretch tweens or timelines
 
 ```swift
-let tween = Tween(from: 0, to: 1, time: 0.5) { print($0) }
+let tween = Tween(from: 0,
+                  to: 1,
+                  time: 0.5) { print($0) }
 
 tween.scale = 2 // duration: 1s
 tween.duration = 2.0 // scale: 4
@@ -108,19 +110,19 @@ tween.duration = 2.0 // scale: 4
 
 Move to a new position
 ```swift
-myView.trxCenterTo(CGPoint(x: 10, y: 15))
+myView.trxCenter(to: CGPoint(x: 10, y: 15))
 ```
 Move from a position to the current one
 ```swift
-myView.trxCenterFrom(CGPointZero)
+myView.trxCenter(from: CGPoint.zero)
 ```
 Animate frame to a given `CGRect`
 ```swift
-myView.trxFrameTo(newFrame)
+myView.trxFrame(to: someFrame)
 ```
 Animate frame from a given `CGRect` to the current frame
 ```swift
-myView.trxFrameTo(someFrame)
+myView.trxFrame(to: someFrame)
 ```
 
 ## Requirements
