@@ -169,10 +169,17 @@ Specify a dependency in [Package.swift](https://swift.org/package-manager/)
 
 **Contributions and suggestions are welcome!**
 
-If you find any problems using TRX feel free to create an issue. 
-Don't forget to add a detailed description and steps to reproduce.
+If you find any problems using TRX or have any feature requests feel free to create an issue and/or a pull request. 
+In case of a problem don't forget to add a detailed description, Xcode and target version as well as steps to reproduce.
 
 If you'd like to ask a general question use [Stack Overflow](http://stackoverflow.com/) with tag **trx.swift**.
+
+### Todos
+
+- Mac version
+- Custom Bezier Curve easing
+- Short rotation plugin
+- Bezier path plugin
 
 ## License
 
