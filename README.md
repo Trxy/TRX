@@ -4,7 +4,7 @@
 [![Build Status](https://img.shields.io/travis/Trxy/TRX/master.svg)](https://travis-ci.org/Trxy/TRX) [![CocoaPods](https://img.shields.io/cocoapods/v/TRX.svg)](https://cocoapods.org/?q=trx) [![License](https://img.shields.io/github/license/Trxy/TRX.svg)](LICENSE)
 
 **TRX** is a versatile animation framework built with ease of use, powerful features and performance in mind.
-**TRX** is inspired by the the excellent JavaScript animation framework [GSAP](http://greensock.com/gsap).
+**TRX** is inspired by the excellent JavaScript animation framework [GSAP](http://greensock.com/gsap).
 
 ## Key Features
 
@@ -17,7 +17,7 @@
 
 ![Tricks](https://trxy.github.io/TRX/tricks.gif)
 
-Have a look at [Tricks](https://github.com/Trxy/Tricks) the example app.
+Take a look at [Tricks](https://github.com/Trxy/Tricks) the example app.
 
 ## Using TRX
 
@@ -29,7 +29,7 @@ Tween(from: 0, to: 20, time: 0.3) {
   object.value = $0
 }.start()
 ```
-or neater...
+Or, neater...
 
 ```swift
 1.trx(to: 20) { object.value = $0 }.start()
@@ -44,7 +44,7 @@ Tween(from: CGPoint.zero, to: CGPoint(x: 20, y: 15), time: 0.3) {
 }.start()
 ```
 
-### Use optional parameters for fine grained control
+### Use optional parameters for fine-grained control
 
 ```swift
 Tween(from: 0,
@@ -83,7 +83,7 @@ TimeLine(tweens: [
 ```
 ![Timeline](https://trxy.github.io/TRX/docs/timeline.png)
 
-Add tweens with an overlap
+Add Tweens with an overlap
 
 ```swift
 let timeline: TimeLine = [
@@ -95,7 +95,7 @@ timeline.start()
 ```
 ![Timeline with an overlap](https://trxy.github.io/TRX/docs/timeline_overlap.png)
 
-### Squeeze and stretch tweens or timelines
+### Squeeze and stretch Tweens or timelines
 
 ```swift
 let tween = Tween(from: 0,
@@ -139,7 +139,7 @@ For swift 2.3 compatible version check out TRX 4.x
 pod "TRX"
 ```
 Don't forget to add use_frameworks! to the Podfile. 
-Requires CocoaPods 0.36.x or greater.
+Requires CocoaPods 0.36.x or higher.
 If you need more help use [CocoaPods Guides](https://guides.cocoapods.org/using/getting-started.html#getting-started).
 
 ### Carthage
@@ -159,7 +159,7 @@ Specify a dependency in [Package.swift](https://swift.org/package-manager/)
 ### Manual
 
 1. Download or clone the project
-2. Build the the preferred target (eg. TRX iOS)
+2. Build the preferred target (eg. TRX iOS)
 3. Locate the framework in finder (from the products group) file and add it to your project.
 4. Add the framework as a dependency of your target in Build Phases
 5. Add the framework to “Link Binary with Libraries” and in the “General” tab under “Embedded Binaries”
@@ -170,7 +170,7 @@ Specify a dependency in [Package.swift](https://swift.org/package-manager/)
 **Contributions and suggestions are welcome!**
 
 If you find any problems using TRX or have any feature requests feel free to create an issue and/or a pull request. 
-In case of a problem don't forget to add a detailed description, Xcode and target version as well as steps to reproduce.
+In the event of a problem don't forget to add a detailed description, Xcode and target version as well as steps to reproduce.
 
 If you'd like to ask a general question use [Stack Overflow](http://stackoverflow.com/) with tag **trx.swift**.
 
