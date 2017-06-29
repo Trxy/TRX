@@ -15,7 +15,7 @@ public extension Ease {
       if t == 1 { return b + c }
       let p = d * 0.3
       let s = p / 4;
-      return -(c * pow(2, 10 * (t - 1)) * sin((t * d - s) * (2 * M_PI) / p)) + b
+      return -(c * pow(2, 10 * (t - 1)) * sin((t * d - s) * (2 * .pi) / p)) + b
     }
     
     /// Ease out
@@ -26,7 +26,7 @@ public extension Ease {
       if t == 1 { return b + c }
       let p = d * 0.3
       let s = p / 4;
-      return c * pow(2, -10 * t) * sin((t * d - s) * (2 * M_PI) / p) + c + b
+      return c * pow(2, -10 * t) * sin((t * d - s) * (2 * .pi) / p) + c + b
     }
     
     /// Ease in out
@@ -38,9 +38,9 @@ public extension Ease {
       let p = d * 0.45
       let s = p / 4
       if t < 1 {
-        return -0.5 * (c * pow(2, 10 * (t - 1)) * sin(((t - 1) * d - s) * (M_PI * 2) / p)) + b
+        return -0.5 * (c * pow(2, 10 * (t - 1)) * sin(((t - 1) * d - s) * (.pi * 2) / p)) + b
       }
-      return c * pow(2, -10 * (t - 1)) * sin(((t - 1) * d - s) * (M_PI * 2) / p) * 0.5 + c + b
+      return c * pow(2, -10 * (t - 1)) * sin(((t - 1) * d - s) * (.pi * 2) / p) * 0.5 + c + b
     }
     
   }
