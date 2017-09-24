@@ -8,7 +8,7 @@ class EasingSpec: QuickSpec {
   
   override func spec() {
     
-    describe("Linear") {
+    describe("linear") {
       
       it("has valid graph") {
         expect(EasingTestView(easing: Ease.linear)).to(haveValidSnapshot())
@@ -16,7 +16,7 @@ class EasingSpec: QuickSpec {
   
     }
     
-    describe("Quad") {
+    describe("quad") {
       
       it("has valid in graph") {
         expect(EasingTestView(easing: Ease.Quad.easeIn)).to(haveValidSnapshot())
@@ -32,7 +32,7 @@ class EasingSpec: QuickSpec {
       
     }
     
-    describe("Cubic") {
+    describe("cubic") {
       
       it("has valid in graph") {
         expect(EasingTestView(easing: Ease.Cubic.easeIn)).to(haveValidSnapshot())
@@ -48,7 +48,7 @@ class EasingSpec: QuickSpec {
       
     }
     
-    describe("Quart") {
+    describe("quart") {
       
       it("has valid in graph") {
         expect(EasingTestView(easing: Ease.Quart.easeIn)).to(haveValidSnapshot())
