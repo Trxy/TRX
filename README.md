@@ -1,10 +1,12 @@
 ![TRX](https://trxy.github.io/TRX/trx@2x.png)
 ---
 
-[![Build Status](https://img.shields.io/travis/Trxy/TRX/master.svg)](https://travis-ci.org/Trxy/TRX) [![CocoaPods](https://img.shields.io/cocoapods/v/TRX.svg)](https://cocoapods.org/?q=trx) [![License](https://img.shields.io/github/license/Trxy/TRX.svg)](LICENSE)
+[![Build Status](https://img.shields.io/travis/Trxy/TRX/master.svg)](https://travis-ci.org/Trxy/TRX) [![CocoaPods](https://img.shields.io/cocoapods/v/TRX.svg)](https://cocoapods.org/?q=trx) [![Carthage](https://img.shields.io/badge/carthage-complatible-green.svg)](https://github.com/Carthage/Carthage) [![License](https://img.shields.io/github/license/Trxy/TRX.svg)](LICENSE) ![Swift](https://img.shields.io/badge/swift-4.o-orange.svg)
 
 **TRX** is a versatile animation framework built with ease of use, powerful features and performance in mind.
 **TRX** is inspired by the excellent JavaScript animation framework [GSAP](http://greensock.com/gsap).
+
+This version is works with **Swift 4**. For **Swift 3** compatible version use 0.5.0.
 
 ## Key Features
 
