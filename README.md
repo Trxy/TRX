@@ -130,7 +130,7 @@ myView.trxFrame(to: someFrame)
 ## Requirements
 
 ```
-iOS: 8.4, tvOS: 9.0, Xcode 8, Swift 3.0
+iOS: 8.4, tvOS: 9.0, Xcode 9, Swift 4.0
 ```
 
 For swift 2.3 compatible version check out TRX 4.x
